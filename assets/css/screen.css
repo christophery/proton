@@ -270,12 +270,12 @@ production stylesheet in assets/built/screen.css
     background-color: #fff;
 }
 
-.has-cover:not(.home-template) .gh-head {
+.has-cover:not(.home) .gh-head {
     background-color: var(--ghost-accent-color);
     color: #fff;
 }
 
-:is(.home-template, .paged:not(.tag-template):not(.author-template)).has-cover .gh-head {
+:is(.home, .paged:not(.tag-template):not(.author-template)).has-cover .gh-head {
     position: absolute;
     top: 0;
     right: 0;
@@ -305,11 +305,11 @@ production stylesheet in assets/built/screen.css
     grid-template-columns: auto 1fr auto;
 }
 
-.is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-logo {
+.is-head-left-logo.home .gh-head:not(.is-header-hidden) .gh-head-logo {
     display: none;
 }
 
-.is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-menu {
+.is-head-left-logo.home .gh-head:not(.is-header-hidden) .gh-head-menu {
     margin-left: -40px;
 }
 

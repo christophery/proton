@@ -28,13 +28,13 @@ $proton_blog_description = get_bloginfo( 'description' );
     <?php wp_head(); ?>
 
 </head>
-<body <?php body_class( 'home-template is-head-left-logo has-cover' ); ?>>
+<body <?php body_class( 'is-head-left-logo has-cover' ); ?>>
 <div class="viewport">
 
     <header id="gh-head" class="gh-head outer">
         <div class="gh-head-inner inner">
             <div class="gh-head-brand">
-                <a class="gh-head-logo" href="{{@site.url}}">
+                <a class="gh-head-logo" href="<?php echo esc_url( home_url() ); ?>">
                     <?php if( $proton_custom_logo_id ){ ?>
                         <img class="site-logo" src="<?php echo esc_url( $proton_image[0] ); ?>" alt="<?php echo esc_html( $proton_blog_name ); ?>" />
                     <?php }else{ ?>

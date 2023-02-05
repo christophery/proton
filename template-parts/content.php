@@ -47,7 +47,7 @@ which templates loop over to generate a list of posts. --}} -->
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="{{url}}">
+        <a class="post-card-content-link" href="<?php esc_url( the_permalink() ); ?>">
             <header class="post-card-header">
                 <div class="post-card-tags">
                     <?php if( $proton_categories ){ ?>

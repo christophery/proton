@@ -9,14 +9,24 @@
 
 get_header();
 
-$geist_categories = get_the_category();
+while ( have_posts() ) :
+    the_post();
 
-//get name of first category
-$geist_category_name = $geist_categories[0]->name;
+    $geist_categories = get_the_category();
 
-//get category url
-$geist_category_url = get_category_link( $geist_categories[0]->term_id );
+    //get name of first category
+    $geist_category_name = $geist_categories[0]->name;
 
+    //get category url
+    $geist_category_url = get_category_link( $geist_categories[0]->term_id );
+
+    $geist_author_avatar = get_avatar( get_the_author_meta( 'ID' ), 60, '', '', array( 'class' => 'author-profile-image' ) );
+
+    $geist_author_bio = get_the_author_meta('description');
+
+    $geist_author_display_name = get_the_author_meta('display_name');
+
+    $geist_author_url = get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) );
 ?>
 
 <main id="site-main" class="site-main">
@@ -34,27 +44,23 @@ $geist_category_url = get_category_link( $geist_categories[0]->term_id );
 
         <?php the_title( '<h1 class="article-title">', '</h1>' ); ?>
 
+        <?php if( has_excerpt() ){ ?>
         <p class="article-excerpt"><?php the_excerpt(); ?></p>
+    	<?php } ?>
 
         <div class="article-byline">
         <section class="article-byline-content">
 
-            <!-- <ul class="author-list">
-                {{#foreach authors}}
+            <ul class="author-list">
                 <li class="author-list-item">
-                    {{#if profile_image}}
-                    <a href="{{url}}" class="author-avatar">
-                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                    </a>
-                    {{else}}
-                    <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
-                    {{/if}}
+                    <a href="<?php echo esc_url( $geist_author_url ); ?>" class="author-avatar">
+                    	<?php echo $geist_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    </a>                    
                 </li>
-                {{/foreach}}
-            </ul> -->
+            </ul>
 
             <div class="article-byline-meta">
-                <!-- <h4 class="author-name">{{authors}}</h4> -->
+                <h4 class="author-name"><a href="<?php echo esc_url( $geist_author_url ); ?>"><?php echo esc_html( $geist_author_display_name ); ?></a></h4>
                 <div class="byline-meta-content">
                     <time class="byline-meta-date" datetime="<?php echo get_the_date(); ?>"><?php echo get_the_date(); ?></time>
                     <?php if( proton_estimated_reading_time() ){ ?>
@@ -91,6 +97,10 @@ $geist_category_url = get_category_link( $geist_categories[0]->term_id );
 
 </article>
 </main>
+
+<?php
+endwhile; // End of the loop.
+?>
 
 <?php
 get_sidebar();

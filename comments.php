@@ -27,23 +27,7 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 		<h2 class="comments-title">
-			<?php
-			$proton_comment_count = get_comments_number();
-			if ( '1' === $proton_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'proton' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $proton_comment_count, 'comments title', 'proton' ) ),
-					number_format_i18n( $proton_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			}
-			?>
+			<?php printf( esc_html__( 'Comments', 'proton' ) ); ?>
 		</h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
@@ -54,6 +38,7 @@ if ( post_password_required() ) {
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
+					'avatar_size' => 60,
 				)
 			);
 			?>

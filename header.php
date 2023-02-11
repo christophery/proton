@@ -17,7 +17,7 @@ $proton_blog_description = get_bloginfo( 'description' );
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-infinite-scroll">
 <head>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>" />

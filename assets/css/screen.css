@@ -1177,37 +1177,43 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* Pagination
 /* ---------------------------------------------------------- */
 
-.pagination {
+.nav-links {
     display: none;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin-top: 8vmin;
 }
 
-html.no-infinite-scroll .pagination {
+html.no-infinite-scroll .nav-links {
     display: grid;
 }
 
-.pagination a {
+.nav-links a {
     font-size: 1.7rem;
     font-weight: 600;
 }
 
-.pagination .page-number {
+/*.navigation .page-number {
     grid-column-start: 2;
     color: var(--color-secondary-text);
+}*/
+
+.nav-links .nav-next {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    text-align: left;
 }
 
-.pagination .older-posts {
+.nav-links .nav-previous {
     grid-column-start: 3;
     text-align: right;
 }
 
-@media (max-width: 767px) {
-    .pagination .page-number {
+/*@media (max-width: 767px) {
+    .navigation .page-number {
         display: none;
     }
-}
+}*/
 
 
 /* 7. Single Post

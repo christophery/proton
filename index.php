@@ -92,6 +92,7 @@ $proton_blog_description = get_bloginfo( 'description' );
 			    <?php the_posts_navigation(); ?>
 
 			</div>
+
 		</main>
 
 	</div>

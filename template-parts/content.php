@@ -23,12 +23,14 @@ $classes = array(
 	'post-card',
 );
 
-if( $wp_query->current_post == 0 && !is_paged() ) {
-    array_push($classes, 'post-card-large'); 
-}
+if( is_front_page() ){
+    if( $wp_query->current_post == 0 && !is_paged() ) {
+        array_push($classes, 'post-card-large'); 
+    }
 
-if( $wp_query->current_post == 1 && !is_paged() || $wp_query->current_post == 2 && !is_paged() ) {
-    array_push($classes, 'dynamic'); 
+    if( $wp_query->current_post == 1 && !is_paged() || $wp_query->current_post == 2 && !is_paged() ) {
+        array_push($classes, 'dynamic'); 
+    }
 }
 
 ?>

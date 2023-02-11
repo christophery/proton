@@ -25,20 +25,6 @@ if( $geist_category ){
 
         <section class="post-card post-card-large">
 
-            <?php //if ( get_header_image() ){ ?>
-            <!-- <div class="post-card-image-link">
-                <img class="post-card-image"
-                    srcset="<?php header_image(); ?> 300w,
-                            <?php header_image(); ?> 600w,
-                            <?php header_image(); ?> 1000w,
-                            <?php header_image(); ?> 2000w"
-                    sizes="(max-width: 1000px) 400px, 800px"
-                    src="<?php header_image(); ?>"
-                    alt=""
-                />
-            </div> -->
-            <?php //} ?>
-
             <div class="post-card-content">
             <div class="post-card-content-link">
                 <header class="post-card-header">

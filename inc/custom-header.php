@@ -4,7 +4,6 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	<?php the_header_image_tag(); ?>
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
@@ -23,9 +22,8 @@ function proton_custom_header_setup() {
 			'proton_custom_header_args',
 			array(
 				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
+				'default-text-color' => 'FFF',
+				'flex-width'         => true,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'proton_header_style',
 			)

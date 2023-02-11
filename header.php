@@ -41,7 +41,7 @@ $proton_blog_description = get_bloginfo( 'description' );
                         <?php echo esc_html( $proton_blog_name ); ?>
                     <?php } ?>
                 </a>
-                <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                <!-- <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button> -->
                 <button class="gh-burger"></button>
             </div>
 
@@ -63,7 +63,7 @@ $proton_blog_description = get_bloginfo( 'description' );
             </nav>
 
             <div class="gh-head-actions">
-            	<button class="gh-search gh-icon-btn"><?php get_template_part('template-parts/icons/search'); ?></button>
+            	<!-- <button class="gh-search gh-icon-btn"><?php get_template_part('template-parts/icons/search'); ?></button> -->
             </div>
         </div>
     </header>

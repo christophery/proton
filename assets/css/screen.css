@@ -1899,7 +1899,11 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .comment-respond{
-    padding: 0 6vw 0;
+    padding: 0;
+}
+
+.reply-title{
+    text-align: center;
 }
 
 #comments{
@@ -1913,6 +1917,10 @@ iframe.instagram-media + script + :not([id]) {
     line-height: 1;
     font-weight: 700;
     margin: 0 0 10px;
+}
+
+#reply-title{
+    text-align: center;
 }
 
 #reply-title small{
@@ -1962,6 +1970,7 @@ iframe.instagram-media + script + :not([id]) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
 }
 
 #submit{

@@ -17,6 +17,18 @@ if( $geist_category ){
 	$geist_category_num_posts = $geist_category[0]->category_count;
 }
 
+//get author ID
+$geist_author_id = get_the_author_meta( 'ID' );
+
+//get avatar
+$geist_author_avatar = get_avatar( $geist_author_id, 100, '', '', $args = array( 'class' => 'author-profile-pic' ) );
+
+//get author bio
+$geist_author_bio = get_the_author_meta( 'description' );
+
+//get author website
+$geist_author_website = get_the_author_meta( 'user_url' );
+
 ?>
 
 <main id="site-main" class="site-main outer">
@@ -27,6 +39,13 @@ if( $geist_category ){
 
             <div class="post-card-content">
             <div class="post-card-content-link">
+
+            	<?php if( is_author() ){ ?>
+                    <?php if( $geist_author_avatar ){ ?>
+                        <?php echo $geist_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <?php } ?>
+                <?php } ?>
+
                 <header class="post-card-header">
                     <h2 class="post-card-title">
 	                    <?php
@@ -34,6 +53,8 @@ if( $geist_category ){
 			            		echo single_term_title();
 			        		}elseif( is_date() ){
 			        			echo get_the_date( _x( 'F Y', 'monthly archives date format', 'geist' ) );
+			        		}elseif( is_author() ){
+			        			the_author();
 			        		}else{
 			        			esc_html_e( 'Archive', 'geist' );
 			        		}
@@ -48,6 +69,8 @@ if( $geist_category ){
 	            		if( category_description() ){
 	            			//output category description
 	            			echo category_description();
+	            		}elseif( is_author() ){
+	            			echo esc_html( $geist_author_bio );
 	            		}else{
 	            			//output number of posts in category
 	            			if( $geist_category_num_posts > 1 ){
@@ -62,6 +85,15 @@ if( $geist_category ){
 	            	endif;
 	            	?>
                 </div>
+
+                <footer class="author-profile-footer">
+                    <div class="author-profile-meta">
+                        <?php if( $geist_author_website ){ ?>
+                            <a class="author-profile-social-link" href="<?php echo esc_url( $geist_author_website ); ?>" target="_blank" rel="noopener"><?php echo esc_url( $geist_author_website ); ?></a>
+                        <?php } ?>
+                    </div>
+                </footer>
+
             </div>
             </div>
 

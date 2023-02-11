@@ -10,51 +10,68 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main class="outer error-content">
+    <div class="inner">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'proton' ); ?></h1>
-			</header><!-- .page-header -->
+        <section class="error-message">
+            <h1 class="error-code"><?php esc_html_e( '404', 'proton' ); ?></h1>
+            <p class="error-description"><?php esc_html_e( 'Page not found', 'proton' ); ?></p>
+            <a class="error-link" href="<?php echo esc_url( home_url() ); ?>">Go to the front page →</a>
+        </section>
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'proton' ); ?></p>
+    </div>
+</main>
 
-					<?php
-					get_search_form();
+<aside class="read-more-wrap outer">
+    <div class="read-more inner">
+        
+    	<?php
+        $geist_latest_posts_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+            'ignore_sticky_posts' => true,
+            'has_password'   => false //exclude password protected posts
+        );
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+        $geist_latest_posts = new WP_Query( $geist_latest_posts_args );
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'proton' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
+        if( $geist_latest_posts->have_posts() ) {
+            while( $geist_latest_posts->have_posts() ) {
+                $geist_latest_posts->the_post();
+              	?>
+				<article class="post-card post">
+					<?php if ( has_post_thumbnail() ) { ?>
+				    <a class="post-card-image-link" href="<?php the_permalink(); ?>">
+				    	<?php the_post_thumbnail('medium_large',array('class' => 'post-card-image')); ?>
+				    </a>
+				    <?php } ?>
 
-					<?php
-					/* translators: %1$s: smiley */
-					$proton_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'proton' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$proton_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+				    <div class="post-card-content">
+				        <a class="post-card-content-link" href="<?php the_permalink(); ?>">
+				            <header class="post-card-header">
+				                <div class="post-card-tags">
+				                </div>
+				                <h2 class="post-card-title">
+				                    <?php the_title(); ?>
+				                </h2>
+				            </header>
+				                <div class="post-card-excerpt"><?php echo get_the_excerpt(); ?></div>
+				        </a>
+				        <footer class="post-card-meta">
+				            <time class="post-card-meta-date" datetime="<?php echo get_the_date(); ?>"><?php echo get_the_date(); ?></time>
+				            <?php if( proton_estimated_reading_time() ){ ?>
+				                    <span class="post-card-meta-length"><?php echo esc_html( proton_estimated_reading_time() ); ?></span>
+				                <?php } ?>
+				        </footer>
+				    </div>
+				</article>
+		<?php
+            	}
+            }
+            wp_reset_query();
+        ?>   
+    </div>
+</aside>
 
 <?php
 get_footer();

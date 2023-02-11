@@ -1904,9 +1904,6 @@ iframe.instagram-media + script + :not([id]) {
 
 #comments{
     font-size: 1.8rem;
-    border: 1px solid #edf4f8;
-    background: #f4f8fb;
-    border-radius: 7px;
 }
 
 #reply-title,
@@ -1915,7 +1912,6 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 3.5rem;
     line-height: 1;
     font-weight: 700;
-    text-align: center;
     margin: 0 0 10px;
 }
 
@@ -1996,7 +1992,7 @@ iframe.instagram-media + script + :not([id]) {
 /* Comments List */
 
 .comments-area{
-    padding: 70px 4.5vw 50px;
+    padding: 70px 0 50px;
 }
 
 .comment-list,
@@ -2011,8 +2007,8 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .comment{
-    margin: 30px 0;
     padding-left: 0;
+    margin-bottom: 4em;
 }
 
 .comment pre{
@@ -2023,36 +2019,29 @@ iframe.instagram-media + script + :not([id]) {
     margin-left: 8rem;
 }
 
-.comment .comment-body{
-    background: #FFF;
-    padding: 3rem;
-    box-shadow: 0 0 1px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.03);
-    border-radius: 8px;
-}
-
 .comment .comment-respond{
     padding-top: 6vw;
     padding-bottom: 2vw;
 }
 
 .comment-author{
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2.3rem;
 }
 
 .comment-author,
 .comment-metadata{
     position: relative;
-    margin-left: 75px;
+    margin-left: 50px;
 }
 
 .comment-author img{
     position: absolute;
-    left: -75px;
-    top: -5px;
+    left: -50px;
+    top: 0;
     border-radius: 50%;
     margin-right: 10px;
-    width: 60px;
+    width: 40px;
     height: auto;
 }
 
@@ -2065,18 +2054,20 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .comment-metadata a{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.3em;
+    color: rgba(0,0,0,.5);
 }
 
 .comment-meta{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .comment-metadata{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 2px;
 }
 
 .comment-reply-link,
@@ -2114,6 +2105,8 @@ iframe.instagram-media + script + :not([id]) {
 .comment-content{
     -ms-word-wrap: break-word;
     word-wrap: break-word;
+    font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 .bypostauthor{
@@ -2133,6 +2126,10 @@ iframe.instagram-media + script + :not([id]) {
     width: calc(100% - 0.3em);
     height: 3px;
     background: var(--ghost-accent-color);
+}
+
+.comment-body .reply{
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 750px) {

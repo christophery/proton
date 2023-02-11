@@ -12,21 +12,21 @@ get_header();
 while ( have_posts() ) :
     the_post();
 
-    $geist_categories = get_the_category();
+    $proton_categories = get_the_category();
 
     //get name of first category
-    $geist_category_name = $geist_categories[0]->name;
+    $proton_category_name = $proton_categories[0]->name;
 
     //get category url
-    $geist_category_url = get_category_link( $geist_categories[0]->term_id );
+    $proton_category_url = get_category_link( $proton_categories[0]->term_id );
 
-    $geist_author_avatar = get_avatar( get_the_author_meta( 'ID' ), 60, '', '', array( 'class' => 'author-profile-image' ) );
+    $proton_author_avatar = get_avatar( get_the_author_meta( 'ID' ), 60, '', '', array( 'class' => 'author-profile-image' ) );
 
-    $geist_author_bio = get_the_author_meta('description');
+    $proton_author_bio = get_the_author_meta('description');
 
-    $geist_author_display_name = get_the_author_meta('display_name');
+    $proton_author_display_name = get_the_author_meta('display_name');
 
-    $geist_author_url = get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) );
+    $proton_author_url = get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) );
 ?>
 
 <main id="site-main" class="site-main">
@@ -35,9 +35,9 @@ while ( have_posts() ) :
     <header class="article-header gh-canvas">
 
         <div class="article-tag post-card-tags">
-            <?php if( $geist_categories ){ ?>
+            <?php if( $proton_categories ){ ?>
                 <span class="post-card-primary-tag">
-                    <a href="<?php echo esc_url( $geist_category_url ); ?>"><?php echo esc_html( $geist_category_name ); ?></a>
+                    <a href="<?php echo esc_url( $proton_category_url ); ?>"><?php echo esc_html( $proton_category_name ); ?></a>
                 </span>
             <?php } ?>
         </div>
@@ -53,14 +53,14 @@ while ( have_posts() ) :
 
             <ul class="author-list">
                 <li class="author-list-item">
-                    <a href="<?php echo esc_url( $geist_author_url ); ?>" class="author-avatar">
-                    	<?php echo $geist_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <a href="<?php echo esc_url( $proton_author_url ); ?>" class="author-avatar">
+                    	<?php echo $proton_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </a>                    
                 </li>
             </ul>
 
             <div class="article-byline-meta">
-                <h4 class="author-name"><a href="<?php echo esc_url( $geist_author_url ); ?>"><?php echo esc_html( $geist_author_display_name ); ?></a></h4>
+                <h4 class="author-name"><a href="<?php echo esc_url( $proton_author_url ); ?>"><?php echo esc_html( $proton_author_display_name ); ?></a></h4>
                 <div class="byline-meta-content">
                     <time class="byline-meta-date" datetime="<?php echo get_the_date(); ?>"><?php echo get_the_date(); ?></time>
                     <?php if( proton_estimated_reading_time() ){ ?>

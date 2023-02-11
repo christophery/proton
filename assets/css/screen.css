@@ -1534,7 +1534,7 @@ is the very first element in the post content */
 }
 
 .wp-block-button a.wp-block-button__link {
-    display: flex;
+    display: inline-flex;
     position: static;
     align-items: center;
     padding: 0 1.2em;

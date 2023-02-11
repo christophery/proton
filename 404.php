@@ -26,18 +26,18 @@ get_header();
     <div class="read-more inner">
         
     	<?php
-        $geist_latest_posts_args = array(
+        $proton_latest_posts_args = array(
             'post_type' => 'post',
             'posts_per_page' => 3,
             'ignore_sticky_posts' => true,
             'has_password'   => false //exclude password protected posts
         );
 
-        $geist_latest_posts = new WP_Query( $geist_latest_posts_args );
+        $proton_latest_posts = new WP_Query( $proton_latest_posts_args );
 
-        if( $geist_latest_posts->have_posts() ) {
-            while( $geist_latest_posts->have_posts() ) {
-                $geist_latest_posts->the_post();
+        if( $proton_latest_posts->have_posts() ) {
+            while( $proton_latest_posts->have_posts() ) {
+                $proton_latest_posts->the_post();
               	?>
 				<article class="post-card post">
 					<?php if ( has_post_thumbnail() ) { ?>

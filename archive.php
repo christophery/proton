@@ -10,24 +10,24 @@
 get_header();
 
 //get category
-$geist_category = get_the_category();
+$proton_category = get_the_category();
 
 //get number of posts in category
-if( $geist_category ){
-	$geist_category_num_posts = $geist_category[0]->category_count;
+if( $proton_category ){
+	$proton_category_num_posts = $proton_category[0]->category_count;
 }
 
 //get author ID
-$geist_author_id = get_the_author_meta( 'ID' );
+$proton_author_id = get_the_author_meta( 'ID' );
 
 //get avatar
-$geist_author_avatar = get_avatar( $geist_author_id, 100, '', '', $args = array( 'class' => 'author-profile-pic' ) );
+$proton_author_avatar = get_avatar( $proton_author_id, 100, '', '', $args = array( 'class' => 'author-profile-pic' ) );
 
 //get author bio
-$geist_author_bio = get_the_author_meta( 'description' );
+$proton_author_bio = get_the_author_meta( 'description' );
 
 //get author website
-$geist_author_website = get_the_author_meta( 'user_url' );
+$proton_author_website = get_the_author_meta( 'user_url' );
 
 ?>
 
@@ -41,8 +41,8 @@ $geist_author_website = get_the_author_meta( 'user_url' );
             <div class="post-card-content-link">
 
             	<?php if( is_author() ){ ?>
-                    <?php if( $geist_author_avatar ){ ?>
-                        <?php echo $geist_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <?php if( $proton_author_avatar ){ ?>
+                        <?php echo $proton_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     <?php } ?>
                 <?php } ?>
 
@@ -52,11 +52,11 @@ $geist_author_website = get_the_author_meta( 'user_url' );
 			        		if( is_category() ){
 			            		echo single_term_title();
 			        		}elseif( is_date() ){
-			        			echo get_the_date( _x( 'F Y', 'monthly archives date format', 'geist' ) );
+			        			echo get_the_date( _x( 'F Y', 'monthly archives date format', 'proton' ) );
 			        		}elseif( is_author() ){
 			        			the_author();
 			        		}else{
-			        			esc_html_e( 'Archive', 'geist' );
+			        			esc_html_e( 'Archive', 'proton' );
 			        		}
 			        	?>
 		        	</h2>
@@ -70,15 +70,15 @@ $geist_author_website = get_the_author_meta( 'user_url' );
 	            			//output category description
 	            			echo category_description();
 	            		}elseif( is_author() ){
-	            			echo esc_html( $geist_author_bio );
+	            			echo esc_html( $proton_author_bio );
 	            		}else{
 	            			//output number of posts in category
-	            			if( $geist_category_num_posts > 1 ){
+	            			if( $proton_category_num_posts > 1 ){
 	            				/* translators: %d: number of posts, i.e. 5 posts  */
-	            				$geist_category_text = printf( esc_html__( 'A collection of %d posts.', 'geist' ), esc_html( $geist_category_num_posts ) );
+	            				$proton_category_text = printf( esc_html__( 'A collection of %d posts.', 'proton' ), esc_html( $proton_category_num_posts ) );
 	            			}else{
 	            				/* translators: %d: number of posts, i.e. 5 posts  */
-	            				$geist_category_text = printf( esc_html__( 'A collection of %d post.', 'geist' ), esc_html ( $geist_category_num_posts ) );
+	            				$proton_category_text = printf( esc_html__( 'A collection of %d post.', 'proton' ), esc_html ( $proton_category_num_posts ) );
 	            			}
 	            		}
 
@@ -88,8 +88,8 @@ $geist_author_website = get_the_author_meta( 'user_url' );
 
                 <footer class="author-profile-footer">
                     <div class="author-profile-meta">
-                        <?php if( $geist_author_website ){ ?>
-                            <a class="author-profile-social-link" href="<?php echo esc_url( $geist_author_website ); ?>" target="_blank" rel="noopener"><?php echo esc_url( $geist_author_website ); ?></a>
+                        <?php if( $proton_author_website ){ ?>
+                            <a class="author-profile-social-link" href="<?php echo esc_url( $proton_author_website ); ?>" target="_blank" rel="noopener"><?php echo esc_url( $proton_author_website ); ?></a>
                         <?php } ?>
                     </div>
                 </footer>

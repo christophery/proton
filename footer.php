@@ -11,7 +11,6 @@
 
 ?>
 
-<!-- {{!-- The global footer at the very bottom of the screen --}} -->
     <footer class="site-footer outer">
         <div class="inner">
             <section class="copyright"><a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a> &copy; <?php echo esc_html( date("Y") ); ?></section>
@@ -33,7 +32,6 @@
     </footer>
 
 </div>
-<!-- {{!-- /.viewport --}} -->
 
 <?php wp_footer(); ?>
 

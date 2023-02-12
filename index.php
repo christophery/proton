@@ -39,16 +39,14 @@ $proton_blog_description = get_bloginfo( 'description' );
 		            />
 		    <?php } ?>
 
-		    <?php if ( get_header_image() ){ ?>
-		        <div class="site-header-inner inner">
-	                <?php if( $proton_custom_logo_id ){ ?>
-	                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-	                <?php }else{ ?>
-	                    <h1 class="site-title"><?php echo esc_html( $proton_blog_name ); ?></h1>
-	                <?php } ?>
-		            <p class="site-description"><?php echo esc_html( $proton_blog_description ); ?></p>
-		        </div>
-		    <?php } ?>
+	        <div class="site-header-inner inner">
+                <?php if( $proton_custom_logo_id ){ ?>
+                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                <?php }else{ ?>
+                    <h1 class="site-title"><?php echo esc_html( $proton_blog_name ); ?></h1>
+                <?php } ?>
+	            <p class="site-description"><?php echo esc_html( $proton_blog_description ); ?></p>
+	        </div>
 
 		</div>
 

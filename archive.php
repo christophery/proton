@@ -127,8 +127,8 @@ $proton_author_website = get_the_author_meta( 'user_url' );
     <?php 
     	the_posts_navigation(
             array(
-                'prev_text' => __('Older Posts <span>→</span>', 'geist'),
-                'next_text' => __('<span>←</span> Newer Posts', 'geist'),
+                'prev_text' => __('Older Posts <span>→</span>', 'proton'),
+                'next_text' => __('<span>←</span> Newer Posts', 'proton'),
             )
         );
     ?>

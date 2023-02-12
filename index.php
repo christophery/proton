@@ -92,8 +92,8 @@ $proton_blog_description = get_bloginfo( 'description' );
 			    <?php 
 			    	the_posts_navigation(
 	                    array(
-	                        'prev_text' => __('Older Posts <span>→</span>', 'geist'),
-	                        'next_text' => __('<span>←</span> Newer Posts', 'geist'),
+	                        'prev_text' => __('Older Posts <span>→</span>', 'proton'),
+	                        'next_text' => __('<span>←</span> Newer Posts', 'proton'),
 	                    )
 	                );
 			    ?>

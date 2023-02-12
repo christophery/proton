@@ -98,5 +98,4 @@ $proton_blog_description = get_bloginfo( 'description' );
 	</div>
 
 <?php
-get_sidebar();
 get_footer();

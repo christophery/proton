@@ -131,5 +131,4 @@ $proton_author_website = get_the_author_meta( 'user_url' );
 
 
 <?php
-get_sidebar();
 get_footer();

@@ -27,10 +27,7 @@
                 ?>
             </nav>
             <div>
-        		<?php
-        		/* translators: 1: Theme name, 2: Theme author. */
-        		printf( esc_html__( '%1$s by %2$s.', 'proton' ), 'Proton', '<a href="https://chrisyee.ca/">Chris Yee</a>' );
-        		?>
+        		<a href="<?php echo esc_url( __( 'https://chrisyee.ca/', 'proton' ) ); ?>" target="_blank" rel="noopener"><?php esc_attr_e( 'Proton by Chris Yee', 'proton' ); ?></a>
             </div>
         </div>
     </footer>

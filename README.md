@@ -1,38 +1,10 @@
-# Casper
+# Proton
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
-
-&nbsp;
-
-![screenshot-desktop](https://user-images.githubusercontent.com/1418797/183329195-8e8f2ee5-a473-4694-a813-a2575491209e.png)
-
-&nbsp;
-
-# First time using a Ghost theme?
-
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-This theme has lots of code comments to help explain what's going on just by reading the code. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://ghost.org/docs/themes/) which explains every possible Handlebars helper and template.
-
-**The main files are:**
-
-- `default.hbs` - The parent template file, which includes your global header/footer
-- `index.hbs` - The main template to generate a list of posts, usually the home page
-- `post.hbs` - The template used to render individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives, eg. "all posts tagged with `news`"
-- `author.hbs` - Used for author archives, eg. "all posts written by Jamie"
-
-One neat trick is that you can also create custom one-off templates by adding the slug of a page to a template file. For example:
-
-- `page-about.hbs` - Custom template for an `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
-
+Proton is a personal blogging theme for WordPress. This theme is a port of Proton v5.0 the default theme for the Ghost blogging platform.
 
 # Development
 
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Proton styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 # install dependencies
@@ -59,11 +31,16 @@ yarn zip
 
 # SVG Icons
 
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
+Proton uses inline SVG icons, included. You can find all icons inside /template-parts/icons.
 
-You can add your own SVG icons in the same manner.
+To use an icon just use the get_template_part() function:
 
+```
+<?php get_template_part('template-parts/icons/website'); ?>
+```
 
-# Copyright & License
+# Third-party resources:
 
-Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
+Casper, Copyright (c) 2013-2022 Ghost Foundation
+License: MIT license.
+Source: https://github.com/TryGhost/Casper

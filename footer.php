@@ -16,7 +16,15 @@
         <div class="inner">
             <section class="copyright"><a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a> &copy; <?php echo esc_html( date("Y") ); ?></section>
             <nav class="site-footer-nav">
-                <!-- {{navigation type="secondary"}} -->
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'secondary',
+                        'menu_class'     => 'nav',
+                        'depth'          => 1
+                    )
+                );
+                ?>
             </nav>
             <div>
         		<?php

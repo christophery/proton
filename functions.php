@@ -50,6 +50,7 @@ function proton_setup() {
 	register_nav_menus(
 		array(
 			'primary' => esc_html__( 'Primary', 'proton' ),
+			'secondary' => esc_html__( 'Secondary', 'proton' ),
 		)
 	);
 

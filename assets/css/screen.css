@@ -1541,7 +1541,6 @@ is the very first element in the post content */
     display: flex;
     position: static;
     align-items: center;
-    width: 100%;
 }
 
 .wp-block-button.aligncenter{

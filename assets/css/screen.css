@@ -145,6 +145,10 @@ production stylesheet in assets/built/screen.css
     position: relative;
 }
 
+.site-header-inner a{
+    color: #FFF;
+}
+
 .site-header-content.left-aligned .site-header-inner {
     align-items: flex-start;
 }

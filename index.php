@@ -41,9 +41,13 @@ $proton_blog_description = get_bloginfo( 'description' );
 
 	        <div class="site-header-inner inner">
                 <?php if( $proton_custom_logo_id ){ ?>
-                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                	<a href="<?php echo esc_url( home_url() ); ?>">
+                    	<img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                	</a>
                 <?php }else{ ?>
-                    <h1 class="site-title"><?php echo esc_html( $proton_blog_name ); ?></h1>
+                	<h1 class="site-title">
+                		<a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( $proton_blog_name ); ?></a>
+                	</h1>
                 <?php } ?>
 	            <p class="site-description"><?php echo esc_html( $proton_blog_description ); ?></p>
 	        </div>

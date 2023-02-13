@@ -2158,12 +2158,13 @@ iframe.instagram-media + script + :not([id]) {
     border-top-right-radius: 0;
 }
 
-.bypostauthor .comment-author .avatar{
+.bypostauthor > article .comment-author .avatar{
     border: 3px solid var(--ghost-accent-color);
     padding: 2px;
 }
 
-.bypostauthor .comment-author .url{
+.bypostauthor > article .comment-author .url,
+.bypostauthor > article .comment-author .fn{
     color: var(--ghost-accent-color);
 }
 

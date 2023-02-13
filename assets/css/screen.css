@@ -1310,7 +1310,7 @@ use it for applying any other styles. */
             [wide-start]
             minmax(auto, 240px)
                 [main-start]
-                    min(1200px, calc(100% - max(8vmin, 40px)))
+                    min(1024px, calc(100% - max(8vmin, 40px)))
                 [main-end]
             minmax(auto, 240px)
             [wide-end]

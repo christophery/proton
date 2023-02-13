@@ -2052,6 +2052,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .comment-list > li.comment li.comment {
     margin-left: 8rem;
+    margin-bottom: 0 !important;
 }
 
 .comment .comment-respond{
@@ -2144,6 +2145,10 @@ iframe.instagram-media + script + :not([id]) {
     line-height: 1.5;
 }
 
+.parent .comment-body{
+    margin-bottom: 2em;
+}
+
 .bypostauthor{
     position: relative;
 }
@@ -2153,15 +2158,14 @@ iframe.instagram-media + script + :not([id]) {
     border-top-right-radius: 0;
 }
 
-/*.bypostauthor:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0.3em;
-    width: calc(100% - 0.3em);
-    height: 3px;
-    background: var(--ghost-accent-color);
-}*/
+.bypostauthor .comment-author .avatar{
+    border: 3px solid var(--ghost-accent-color);
+    padding: 2px;
+}
+
+.bypostauthor .comment-author .url{
+    color: var(--ghost-accent-color);
+}
 
 .comment-body .reply{
     margin-top: 10px;

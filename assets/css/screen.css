@@ -1398,8 +1398,7 @@ is the very first element in the post content */
     font-size: 2rem;
     line-height: 1.6em;
 
-    margin-top: 1em;
-    margin-bottom: 0;
+    margin: 1em 0;
 }
 
 .gh-content .kg-callout-card .kg-callout-text,
@@ -2015,6 +2014,10 @@ iframe.instagram-media + script + :not([id]) {
     margin-bottom: 20px;
 }
 
+.comment-form-comment{
+    margin-bottom: 20px;
+}
+
 /* Comments List */
 
 .comments-area{
@@ -2144,7 +2147,7 @@ iframe.instagram-media + script + :not([id]) {
     border-top-right-radius: 0;
 }
 
-.bypostauthor:before{
+/*.bypostauthor:before{
     content: "";
     position: absolute;
     top: 0;
@@ -2152,7 +2155,7 @@ iframe.instagram-media + script + :not([id]) {
     width: calc(100% - 0.3em);
     height: 3px;
     background: var(--ghost-accent-color);
-}
+}*/
 
 .comment-body .reply{
     margin-top: 10px;

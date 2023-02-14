@@ -612,41 +612,13 @@ production stylesheet in assets/built/screen.css
 /* Search
 /* ---------------------------------------------------------- */
 
-.gh-search {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    outline: none;
+.search .post-card-container,
+.search .post-card-large .post-card-content{
+    grid-column: 1 / span 2;
 }
 
-.gh-search:hover {
-    opacity: 0.9;
-}
-
-.gh-head-brand .gh-search {
-    margin-right: 8px;
-}
-
-.gh-head-actions .gh-search {
-    margin-right: -4px;
-}
-
-@media (max-width: 767px) {
-    .gh-head-actions .gh-search {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .gh-head-brand .gh-search {
-        display: none;
-    }
+.no-results{
+    grid-column: 1/-1;
 }
 
 

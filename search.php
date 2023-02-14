@@ -10,34 +10,45 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+<main id="site-main" class="site-main outer">
+<div class="inner posts">
+    <div class="post-feed">
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'proton' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+        <section class="post-card post-card-large">
+
+            <div class="post-card-content">
+	            <div class="post-card-content-link">
+
+	                <header class="post-card-header">
+	                    <h2 class="post-card-title">
+		                    <?php
+	    					/* translators: %s: search query. */
+	    					printf( esc_html__( 'Search Results for: %s', 'proton' ), '<span>' . get_search_query() . '</span>' );
+	    					?>
+			        	</h2>
+	                </header>
+
+	            </div>
+            </div>
+
+        </section>
+
+        <?php if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
-
-			the_posts_navigation();
 
 		else :
 
@@ -46,7 +57,19 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+    </div>
+
+    <?php 
+    	the_posts_navigation(
+            array(
+                'prev_text' => __('Older Posts <span>→</span>', 'proton'),
+                'next_text' => __('<span>←</span> Newer Posts', 'proton'),
+            )
+        );
+    ?>
+    
+</div>
+</main>
 
 <?php
 get_footer();

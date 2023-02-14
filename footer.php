@@ -33,6 +33,13 @@
 
 </div>
 
+<div id="search" class="search-overlay">
+    <button class="search-overlay-close" aria-label="close search overlay"></button>
+    <div class="search-overlay-content">
+        <?php get_search_form(); ?>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

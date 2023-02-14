@@ -41,7 +41,7 @@ $proton_blog_description = get_bloginfo( 'description' );
                         <?php echo esc_html( $proton_blog_name ); ?>
                     <?php } ?>
                 </a>
-                <!-- <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button> -->
+                <button class="search-button gh-icon-btn" data-ghost-search><?php get_template_part('template-parts/icons/search'); ?></button>
                 <button class="gh-burger"></button>
             </div>
 
@@ -55,15 +55,10 @@ $proton_blog_description = get_bloginfo( 'description' );
     				)
     			);
     			?>
-                <!-- {{#unless @site.members_enabled}}
-                    {{#match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    {{/match}}
-                {{/unless}} -->
+                <!-- <button class="search-button gh-icon-btn" data-ghost-search><?php get_template_part('template-parts/icons/search'); ?></button> -->
             </nav>
 
             <div class="gh-head-actions">
-            	<!-- <button class="gh-search gh-icon-btn"><?php get_template_part('template-parts/icons/search'); ?></button> -->
                 <div class="gh-social">
                     <?php if ( get_theme_mod( 'proton_social_facebook') ){ ?>
                         <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_facebook') ); ?>" title="<?php esc_html_e( 'Facebook', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/facebook'); ?></a>
@@ -87,6 +82,7 @@ $proton_blog_description = get_bloginfo( 'description' );
                         <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_linkedin') ); ?>" title="<?php esc_html_e( 'LinkedIn', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/linkedin'); ?></a>
                     <?php } ?>
                 </div>
+                <button class="search-button gh-icon-btn"><?php get_template_part('template-parts/icons/search'); ?></button>
             </div>
         </div>
     </header>

@@ -1061,6 +1061,10 @@ production stylesheet in assets/built/screen.css
     stroke: var(--ghost-accent-color);
 }
 
+.post-card-image-link.no-image svg path{
+    fill: var(--ghost-accent-color);
+}
+
 .post-card-image-link::after {
     content: "";
     display: block;

@@ -1044,7 +1044,21 @@ production stylesheet in assets/built/screen.css
 }
 
 .post-card-image-link.no-image{
-    background: var(--color-lightgrey);
+    border: 2px solid var(--color-lightgrey);
+}
+
+.post-card-image-link.no-image svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 4em;
+}
+
+.post-card-image-link.no-image svg polyline,
+.post-card-image-link.no-image svg path{
+    stroke: var(--ghost-accent-color);
 }
 
 .post-card-image-link::after {

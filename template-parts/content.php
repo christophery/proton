@@ -35,10 +35,6 @@ if( is_front_page() ){
 
 ?>
 
-
-<!-- {{!-- This is a partial file used to generate a post "card"
-which templates loop over to generate a list of posts. --}} -->
-
 <article <?php post_class($classes); ?>>
 
     <?php if ( has_post_thumbnail() ) { ?>

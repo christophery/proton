@@ -59,6 +59,45 @@ production stylesheet in assets/built/screen.css
 
 }
 
+/* Animations
+/* ---------------------------------------------------------- */
+
+@-webkit-keyframes popup {
+ 0% {
+  -webkit-transform:translateY(-20px);
+  transform:translateY(-20px);
+  opacity:0
+ }
+ 1% {
+  -webkit-transform:translateY(20px);
+  transform:translateY(20px);
+  opacity:0
+ }
+ to {
+  -webkit-transform:translateY(0);
+  transform:translateY(0);
+  opacity:1
+ }
+}
+
+@keyframes popup {
+ 0% {
+  -webkit-transform:translateY(-20px);
+  transform:translateY(-20px);
+  opacity:0
+ }
+ 1% {
+  -webkit-transform:translateY(20px);
+  transform:translateY(20px);
+  opacity:0
+ }
+ to {
+  -webkit-transform:translateY(0);
+  transform:translateY(0);
+  opacity:1
+ }
+}
+
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -682,6 +721,11 @@ production stylesheet in assets/built/screen.css
     pointer-events: auto;
 }
 
+.search-overlay-visible .search-overlay-content{
+    -webkit-animation: popup .25s ease;
+    animation: popup .25s ease;
+}
+
 .search-overlay-content {
     position: relative;
     z-index: 9999;
@@ -695,6 +739,8 @@ production stylesheet in assets/built/screen.css
     border-radius: .8rem;
     height: 65px;
     margin-top: 8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     max-width: 512px;
     width: 100%;
 }

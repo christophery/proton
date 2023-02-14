@@ -659,7 +659,7 @@ production stylesheet in assets/built/screen.css
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9000;
+    z-index: 3999999;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

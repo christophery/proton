@@ -31,6 +31,81 @@ function proton_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	/**
+	 * Social Profiles
+	 */
+
+	$wp_customize->add_section(
+	    'proton_social',
+	    array(
+	        'title'     => 'Social Profiles',
+	        'description' => __( 'Enter the URL to your account or profile for each service for the icon to appear in the header.', 'proton' ),
+	        'priority'  => 200
+	    )
+	);
+
+	$social_profiles = array(
+		array(
+			'title' => 'Facebook',
+			'id' => 'facebook',
+			'placeholder' => 'https://facebook.com/username'
+		),
+		array(
+			'title' => 'Twitter',
+			'id' => 'twitter',
+			'placeholder' => 'https://twitter.com/username'
+		),
+		array(
+			'title' => 'Instagram',
+			'id' => 'instagram',
+			'placeholder' => 'https://instagram.com/username'
+		),
+		array(
+			'title' => 'YouTube',
+			'id' => 'youtube',
+			'placeholder' => 'https://youtube.com/username'
+		),
+		array(
+			'title' => 'GitHub',
+			'id' => 'github',
+			'placeholder' => 'https://github.com/username'
+		),
+		array(
+			'title' => 'Mastodon',
+			'id' => 'mastodon',
+			'placeholder' => 'https://host.tld/@username'
+		),
+		array(
+			'title' => 'LinkedIn',
+			'id' => 'linkedin',
+			'placeholder' => 'https://linkedin.com/in/username'
+		)
+	);
+
+	foreach ( $social_profiles as $social_profile ) {
+
+	    $wp_customize->add_setting(
+	  		'proton_social_' . $social_profile['id'],
+	  		array(
+	  			'transport' => 'refresh',
+	  			'sanitize_callback' => 'esc_url_raw'
+	  		)
+	  	);
+
+	  	$wp_customize->add_control(
+	  		'proton_social_' . $social_profile['id'],
+	  		array(
+	  			'section' => 'proton_social',
+	  			'label' => $social_profile['title'],
+	  			'type' => 'url',
+	  			'input_attrs' => array(
+	  	            'placeholder' => $social_profile['placeholder'],
+	  	        )
+	  		)
+	  	);
+
+	}
 }
 add_action( 'customize_register', 'proton_customize_register' );
 

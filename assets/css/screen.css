@@ -43,8 +43,6 @@ production stylesheet in assets/built/screen.css
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
 
-    --ghost-accent-color: #FF1A75;
-
     /*
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand

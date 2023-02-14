@@ -106,6 +106,28 @@ function proton_customize_register( $wp_customize ) {
 	  	);
 
 	}
+
+	/**
+	 * Accent Color
+	 */
+
+	$wp_customize->add_setting( 'proton_accent_color' , array(
+	    'default'     => '#FF1A75',
+	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize,
+	        'proton_accent_color',
+	        array(
+	            'label'      => __( 'Accent Color', 'proton' ),
+	            'section'    => 'colors',
+	            'settings'   => 'proton_accent_color'
+	        )
+	    )
+	);
 }
 add_action( 'customize_register', 'proton_customize_register' );
 

@@ -173,3 +173,21 @@ function proton_estimated_reading_time() {
     return $estimated_time;
 
 }
+
+/**
+ * Customizer Styles
+ */
+
+function proton_customizer_styles() {
+
+	$proton_accent_color = get_theme_mod( 'proton_accent_color' );
+
+	echo '<style type="text/css">';
+		if( $proton_accent_color ){
+			echo ':root {';
+				echo '--ghost-accent-color:' . $proton_accent_color . ';';
+			echo '}';
+		}
+	echo '</style>';
+}
+add_action( 'wp_head', 'proton_customizer_styles' );

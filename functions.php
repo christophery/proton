@@ -71,18 +71,6 @@ function proton_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'proton_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -111,7 +99,7 @@ add_action( 'after_setup_theme', 'proton_setup' );
  * @global int $content_width
  */
 function proton_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'proton_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'proton_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'proton_content_width', 0 );
 

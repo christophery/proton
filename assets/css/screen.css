@@ -1910,11 +1910,6 @@ iframe.instagram-media + script + :not([id]) {
 /* 7.6. Comments
 /* ---------------------------------------------------------- */
 
-.post-full-comments {
-    margin: 0 auto;
-    max-width: 840px;
-}
-
 .comment-respond{
     padding: 0;
 }
@@ -1925,8 +1920,6 @@ iframe.instagram-media + script + :not([id]) {
 
 #comments{
     font-size: 1.8rem;
-    max-width: 1024px;
-    margin: 0 auto;
 }
 
 #reply-title,

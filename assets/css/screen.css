@@ -1043,6 +1043,10 @@ production stylesheet in assets/built/screen.css
     margin-bottom: 32px;
 }
 
+.post-card-image-link.no-image{
+    background: var(--color-lightgrey);
+}
+
 .post-card-image-link::after {
     content: "";
     display: block;

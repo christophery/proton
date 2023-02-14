@@ -98,6 +98,9 @@ while ( have_posts() ) :
 </article>
 </main>
 
+<!-- Related Posts -->
+<?php get_template_part('template-parts/related-posts'); ?>
+
 <?php
 endwhile; // End of the loop.
 ?>

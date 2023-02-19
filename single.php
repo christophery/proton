@@ -74,12 +74,10 @@ while ( have_posts() ) :
 
         <?php if ( has_post_thumbnail() ) { ?>
             <figure class="article-image">
-                <!-- {{!-- This is a responsive image, it loads different sizes depending on device
-                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}} -->
                 <?php the_post_thumbnail('full'); ?>
-                <!-- {{#if feature_image_caption}}
-                    <figcaption>{{feature_image_caption}}</figcaption>
-                {{/if}} -->
+                <?php if( get_the_post_thumbnail_caption() ){ ?>
+                    <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+                <?php } ?>
             </figure>
         <?php } ?>
 

@@ -25,24 +25,16 @@ $proton_blog_description = get_bloginfo( 'description' );
 
 		<div class="site-header-content outer">
 
-		    <?php if ( get_header_image() ){ ?>
-		            <!-- {{!-- This is a responsive image, it loads different sizes depending on device
-		            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}} -->
-		            <img class="site-header-cover"
-		                srcset="<?php header_image(); ?> 300w,
-		                        <?php header_image(); ?> 600w,
-		                        <?php header_image(); ?> 1000w,
-		                        <?php header_image(); ?> 2000w"
-		                sizes="100vw"
-		                src="<?php header_image(); ?>"
-		                alt="{{@site.title}}"
-		            />
-		    <?php } ?>
+		    <?php 
+		    	if ( get_header_image() ){
+		    		echo get_header_image_tag( array('class' => 'site-header-cover') );
+		    	} 
+		    ?>
 
 	        <div class="site-header-inner inner">
                 <?php if( $proton_custom_logo_id ){ ?>
                 	<a href="<?php echo esc_url( home_url() ); ?>">
-                    	<img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                    	<img class="site-logo" src="<?php echo $proton_image; ?>" alt="<?php echo $proton_blog_name; ?>">
                 	</a>
                 <?php }else{ ?>
                 	<h1 class="site-title">

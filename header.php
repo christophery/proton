@@ -55,7 +55,6 @@ $proton_blog_description = get_bloginfo( 'description' );
     				)
     			);
     			?>
-                <!-- <button class="search-button gh-icon-btn" data-ghost-search><?php get_template_part('template-parts/icons/search'); ?></button> -->
             </nav>
 
             <div class="gh-head-actions">

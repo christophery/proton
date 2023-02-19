@@ -15,7 +15,7 @@
 get_header();
 
 $proton_custom_logo_id = get_theme_mod( 'custom_logo' );
-$proton_image = wp_get_attachment_image_src( $proton_custom_logo_id , 'full' );
+$proton_image = wp_get_attachment_image( $proton_custom_logo_id , 'full', false, array( 'class' => 'site-logo' ) );
 
 $proton_blog_name = get_bloginfo( 'name' );
 $proton_blog_description = get_bloginfo( 'description' );
@@ -32,9 +32,9 @@ $proton_blog_description = get_bloginfo( 'description' );
 		    ?>
 
 	        <div class="site-header-inner inner">
-                <?php if( $proton_custom_logo_id ){ ?>
+                <?php if( has_custom_logo() ){ ?>
                 	<a href="<?php echo esc_url( home_url() ); ?>">
-                    	<img class="site-logo" src="<?php echo $proton_image; ?>" alt="<?php echo $proton_blog_name; ?>">
+                		<?php echo $proton_image; ?>
                 	</a>
                 <?php }else{ ?>
                 	<h1 class="site-title">

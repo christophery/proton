@@ -10,7 +10,7 @@
  */
 
 $proton_custom_logo_id = get_theme_mod( 'custom_logo' );
-$proton_image = wp_get_attachment_image_src( $proton_custom_logo_id , 'full' );
+$proton_image = wp_get_attachment_image( $proton_custom_logo_id , 'full', false, array( 'class' => 'site-logo' ) );
 
 $proton_blog_name = get_bloginfo( 'name' );
 $proton_blog_description = get_bloginfo( 'description' );
@@ -35,8 +35,8 @@ $proton_blog_description = get_bloginfo( 'description' );
         <div class="gh-head-inner inner">
             <div class="gh-head-brand">
                 <a class="gh-head-logo" href="<?php echo esc_url( home_url() ); ?>">
-                    <?php if( $proton_custom_logo_id ){ ?>
-                        <img class="site-logo" src="<?php echo esc_url( $proton_image[0] ); ?>" alt="<?php echo esc_html( $proton_blog_name ); ?>" />
+                    <?php if( has_custom_logo() ){ ?>
+                        <?php echo $proton_image; ?>
                     <?php }else{ ?>
                         <?php echo esc_html( $proton_blog_name ); ?>
                     <?php } ?>

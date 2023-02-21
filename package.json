@@ -2,7 +2,7 @@
     "name": "proton",
     "description": "Proton is a personal blogging theme for WordPress. This theme is based off of Casper 5.x the default theme for the Ghost blogging platform.",
     "demo": "https://chrisyee.ca",
-    "version": "0.8.2",
+    "version": "0.9.0",
     "license": "MIT",
     "scripts": {
         "dev": "gulp",

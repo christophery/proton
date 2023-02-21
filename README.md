@@ -4,7 +4,7 @@ Proton is a personal blogging theme for WordPress. This theme is based off of Ca
 
 Feel free to [contact me](https://chrisyee.ca/contact/) if you use Proton in one of your websites.
 
-[Download Theme](https://github.com/christophery/proton/releases)
+[View Demo](https://chrisyee.ca/) | [Download Theme](https://github.com/christophery/proton/releases)
 
 ![Proton Screenshot](screenshot.png?raw=true)
 

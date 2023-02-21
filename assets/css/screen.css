@@ -2842,7 +2842,7 @@ html.dark-mode .post-card-image-link.no-image{
     }
 
     html.auto-color :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
-        color: color-mod(var(--color-secondary-text) l(-22%));
+        color: color-mod(var(--color-secondary-text) l(60%));
     }
 
     html.auto-color .post-card-featured {
@@ -2854,10 +2854,10 @@ html.dark-mode .post-card-image-link.no-image{
     }
 
     html.auto-color .post-card-excerpt {
-        color: var(--color-secondary-text);
+        color: #fff;
     }
 
-    html.auto-color .pagination a {
+    html.auto-color .posts-navigation a {
         color: #fff;
     }
 
@@ -2988,6 +2988,38 @@ html.dark-mode .post-card-image-link.no-image{
 
     html.auto-color .footer-cta-title {
         color: #fff;
+    }
+
+    html.auto-color #reply-title, 
+    html.auto-color .comments-title{
+        color: #fff;
+    }
+
+    html.auto-color .comment-notes, 
+    html.auto-color .logged-in-as{
+        color: #fff;
+    }
+
+    html.auto-color .comment-body a,
+    html.auto-color .comment-form a{
+        color: #fff;
+    }
+
+    html.auto-color .bypostauthor > article .comment-author .fn,
+    html.auto-color .bypostauthor > article .comment-author .url{
+        color: #fff;
+    }
+
+    html.auto-color .bypostauthor > article .comment-author .avatar{
+        border-color: #fff;
+    }
+
+    html.auto-color .author-profile-social-link{
+        color: color-mod(var(--color-secondary-text) l(60%));
+    }
+
+    html.auto-color .post-card-image-link.no-image{
+        border-color: color-mod(var(--color-secondary-text) l(20%));
     }
 }
 

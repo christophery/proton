@@ -24,6 +24,11 @@ if( get_theme_mod( 'proton_color_scheme_toggle') === 'dark' ){
     array_push($classes, 'dark-mode');
 }
 
+//add auto class if enabled
+if( get_theme_mod( 'proton_color_scheme_toggle') === 'auto' ){
+    array_push($classes, 'auto-color');
+}
+
 //join classes with a string
 $classes = implode(' ', $classes);
 

@@ -152,13 +152,14 @@ function proton_customize_register( $wp_customize ) {
 	        'proton_color_scheme_toggle',
 	        array(
 	            'label'      => __( 'Appearance', 'proton' ),
-	            'description' => __( 'Adjust the overall appearance of the theme.', 'proton' ),
+	            'description' => __( 'Adjust the overall appearance of the theme. "Auto" will automatically adjust the appearance based on the users OS appearance/color preference.', 'proton' ),
 	            'section'    => 'proton_color_scheme',
 	            'settings'   => 'proton_color_scheme_toggle',
 	            'type'    => 'radio',
 	            'choices' => array(
                     'light' => 'Light (default)',
                     'dark' => 'Dark',
+                    'auto' => 'Auto'
                 )
 	        )
 	    )

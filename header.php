@@ -15,9 +15,21 @@ $proton_image = wp_get_attachment_image( $proton_custom_logo_id , 'full', false,
 $proton_blog_name = get_bloginfo( 'name' );
 $proton_blog_description = get_bloginfo( 'description' );
 
+$classes = array(
+    'no-infinite-scroll',
+);
+
+//add dark mode class if enabled
+if( get_theme_mod( 'proton_color_scheme_toggle') === 'dark' ){
+    array_push($classes, 'dark-mode');
+}
+
+//join classes with a string
+$classes = implode(' ', $classes);
+
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-infinite-scroll">
+<html <?php language_attributes(); ?> class="<?php echo $classes; ?>">
 <head>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>" />

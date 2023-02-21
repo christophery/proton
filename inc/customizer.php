@@ -128,6 +128,41 @@ function proton_customize_register( $wp_customize ) {
 	        )
 	    )
 	);
+
+	/**
+	 * Color Scheme
+	 */
+
+	$wp_customize->add_section(
+	    'proton_color_scheme',
+	    array(
+	        'title'     => 'Color Scheme',
+	        'priority'  => 200
+	    )
+	);
+
+	$wp_customize->add_setting( 'proton_color_scheme_toggle' , array(
+	    'default'     => 'light',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control(
+	    new WP_Customize_Control(
+	        $wp_customize,
+	        'proton_color_scheme_toggle',
+	        array(
+	            'label'      => __( 'Appearance', 'proton' ),
+	            'description' => __( 'Adjust the overall appearance of the theme.', 'proton' ),
+	            'section'    => 'proton_color_scheme',
+	            'settings'   => 'proton_color_scheme_toggle',
+	            'type'    => 'radio',
+	            'choices' => array(
+                    'light' => 'Light (default)',
+                    'dark' => 'Dark',
+                )
+	        )
+	    )
+	);
 }
 add_action( 'customize_register', 'proton_customize_register' );
 

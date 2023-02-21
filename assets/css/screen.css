@@ -2802,6 +2802,10 @@ html.dark-mode .author-profile-social-link{
     color: color-mod(var(--color-secondary-text) l(60%));
 }
 
+html.dark-mode .post-card-image-link.no-image{
+    border-color: color-mod(var(--color-secondary-text) l(20%));
+}
+
 @media (prefers-color-scheme: dark) {
     html.auto-color body {
         color: rgba(255, 255, 255, 0.75);

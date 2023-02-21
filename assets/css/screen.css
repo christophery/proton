@@ -2626,7 +2626,7 @@ html.dark-mode .post-card-image {
 }
 
 html.dark-mode :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
-    color: color-mod(var(--color-secondary-text) l(-22%));
+    color: color-mod(var(--color-secondary-text) l(60%));
 }
 
 html.dark-mode .post-card-featured {
@@ -2638,10 +2638,10 @@ html.dark-mode .post-card-title {
 }
 
 html.dark-mode .post-card-excerpt {
-    color: var(--color-secondary-text);
+    color: #fff;
 }
 
-html.dark-mode .pagination a {
+html.dark-mode .posts-navigation a {
     color: #fff;
 }
 
@@ -2772,6 +2772,23 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 
 html.dark-mode .footer-cta-title {
     color: #fff;
+}
+
+html.dark-mode .comment-body a{
+    color: #fff;
+}
+
+html.dark-mode .bypostauthor > article .comment-author .fn,
+html.dark-mode .bypostauthor > article .comment-author .url{
+    color: #fff;
+}
+
+html.dark-mode .bypostauthor > article .comment-author .avatar{
+    border-color: #fff;
+}
+
+html.dark-mode .author-profile-social-link{
+    color: color-mod(var(--color-secondary-text) l(60%));
 }
 
 @media (prefers-color-scheme: dark) {

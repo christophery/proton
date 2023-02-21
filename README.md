@@ -2,6 +2,51 @@
 
 Proton is a personal blogging theme for WordPress. This theme is based off of Casper 5.x the default theme for the Ghost blogging platform.
 
+Feel free to [contact me](https://chrisyee.ca/contact/) if you use Proton in one of your websites.
+
+[Download Theme](https://github.com/christophery/proton/releases)
+
+![Proton Screenshot](screenshot.png?raw=true)
+
+## Features
+
+- [Gutenberg Editor](https://wordpress.org/gutenberg/) Support
+- Search
+- Comments
+- Customizer
+- Social Profiles
+- Responsive Design
+- Infinite Scroll ([with Jetpack](https://jetpack.com/features/design/infinite-scroll/))
+- Dark Mode
+
+## Requirements
+
+- [WordPress](http://wordpress.org/)
+
+## Install
+
+1. In your admin panel, go to **Appearance** > **Themes** and click the **Add New** button.
+2. Click **Upload Theme** and **Choose File**, then select the theme's .zip file. Click **Install Now**.
+3. Click **Activate** to use your new theme right away.
+
+## Color Schemes
+
+Dark mode is not enabled by default. To enable this feature go to **Appearance** > **Customize** > **Color Scheme**.
+
+### Light (default)
+This will display the theme in light mode for everyone.
+
+### Dark
+This will display the theme in dark mode for everyone.
+
+### Auto
+This will automatically adjust the appearance based on the users OS appearance/color preference.
+
+## Editing Proton
+The recommended way to edit the theme is to [create a child theme](https://developer.wordpress.org/themes/advanced-topics/child-themes/).
+
+This will ensure that none of your changes will be lost when you update the theme.
+
 # Development
 
 Proton styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
@@ -41,6 +86,10 @@ To use an icon just use the get_template_part() function:
 
 # Third-party resources:
 
-Casper, Copyright (c) 2013-2022 Ghost Foundation
-License: MIT license.
-Source: https://github.com/TryGhost/Casper
+Casper, Copyright (c) 2013-2022 [Ghost Foundation](https://ghost.org/)  
+**License:** [MIT license](https://github.com/TryGhost/Casper/blob/master/LICENSE).  
+**Source:** [https://github.com/TryGhost/Casper](https://github.com/TryGhost/Casper)  
+
+_s, Copyright 2015-2018 [Automattic, Inc.](https://automattic.com/)  
+**License:** [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)  
+**Source:** [https://github.com/Automattic/_s/](https://github.com/Automattic/_s/)

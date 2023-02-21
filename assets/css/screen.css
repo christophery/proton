@@ -2774,7 +2774,18 @@ html.dark-mode .footer-cta-title {
     color: #fff;
 }
 
-html.dark-mode .comment-body a{
+html.dark-mode #reply-title, 
+html.dark-mode .comments-title{
+    color: #fff;
+}
+
+html.dark-mode .comment-notes, 
+html.dark-mode .logged-in-as{
+    color: #fff;
+}
+
+html.dark-mode .comment-body a,
+html.dark-mode .comment-form a{
     color: #fff;
 }
 

@@ -66,3 +66,11 @@ if ( ! function_exists( 'proton_infinite_scroll_render' ) ) :
 		}
 	}
 endif;
+
+function filter_jetpack_infinite_scroll_js_settings( $settings ) {
+	$settings['text'] = __( 'Load more posts +', 'proton' );
+
+	return $settings;
+}
+
+add_filter( 'infinite_scroll_js_settings', 'filter_jetpack_infinite_scroll_js_settings' );

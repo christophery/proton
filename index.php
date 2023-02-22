@@ -50,7 +50,7 @@ $proton_blog_description = get_bloginfo( 'description' );
 		<main id="site-main" class="site-main outer">
 			<div class="inner posts">
 
-			    <div class="post-feed">
+			    <div id="content" class="post-feed">
 			        <?php
 	        		if ( have_posts() ) :
 

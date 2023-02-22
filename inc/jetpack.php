@@ -19,9 +19,10 @@ function proton_jetpack_setup() {
 	add_theme_support(
 		'infinite-scroll',
 		array(
-			'container' => 'main',
+			'container' => 'content',
 			'render'    => 'proton_infinite_scroll_render',
-			'footer'    => 'page',
+			'footer'    => false,
+			'wrapper'   => false
 		)
 	);
 

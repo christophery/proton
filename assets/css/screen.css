@@ -3023,6 +3023,51 @@ html.dark-mode .post-card-image-link.no-image{
     }
 }
 
+/* Jetpack Infinite Scroll
+/* ---------------------------------------------------------- */
+
+.infinite-scroll .posts-navigation{
+    display: none;
+}
+
+#infinite-handle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 1.5vw 33px;
+    grid-column: 1 / span 6;
+}
+
+#infinite-handle span{
+    padding: 5px 16px !important;
+    color: var(--color-darkgrey) !important;
+    transition: all .2s ease;
+    background: transparent !important;
+    font-weight: bold;
+}
+
+#infinite-handle span:hover{
+    border-color: var(--ghost-accent-color);
+    color: var(--ghost-accent-color) !important;
+    text-decoration: none;
+}
+
+#infinite-handle span button{
+    text-transform: capitalize;
+    font-size: 1.5rem !important;
+}
+
+.infinite-loader{
+    width: 100%;
+    margin-bottom: 30px;
+    grid-column: 1 / span 6;
+}
+
+.infinite-loader .spinner{
+    margin: 0 auto;
+}
+
 /*
 
 Hey! You reached the end.

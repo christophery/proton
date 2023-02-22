@@ -29,9 +29,9 @@ Feel free to [contact me](https://chrisyee.ca/contact/) if you use Proton in one
 2. Click **Upload Theme** and **Choose File**, then select the theme's .zip file. Click **Install Now**.
 3. Click **Activate** to use your new theme right away.
 
-## Color Schemes
+## Color Scheme
 
-Dark mode is not enabled by default. To enable this feature go to **Appearance** > **Customize** > **Color Scheme**.
+Dark mode is not enabled by default. To enable this feature go to **Appearance** > **Customize** > **Site Identity** > **Color Scheme**.
 
 ### Light (default)
 This will display the theme in light mode for everyone.

@@ -123,7 +123,7 @@ function proton_customize_register( $wp_customize ) {
 	        'proton_accent_color',
 	        array(
 	            'label'      => __( 'Accent Color', 'proton' ),
-	            'section'    => 'colors',
+	            'section'    => 'title_tagline',
 	            'settings'   => 'proton_accent_color'
 	        )
 	    )
@@ -132,14 +132,6 @@ function proton_customize_register( $wp_customize ) {
 	/**
 	 * Color Scheme
 	 */
-
-	$wp_customize->add_section(
-	    'proton_color_scheme',
-	    array(
-	        'title'     => 'Color Scheme',
-	        'priority'  => 200
-	    )
-	);
 
 	$wp_customize->add_setting( 'proton_color_scheme_toggle' , array(
 	    'default'     => 'light',
@@ -151,9 +143,9 @@ function proton_customize_register( $wp_customize ) {
 	        $wp_customize,
 	        'proton_color_scheme_toggle',
 	        array(
-	            'label'      => __( 'Appearance', 'proton' ),
+	            'label'      => __( 'Color Scheme', 'proton' ),
 	            'description' => __( 'Adjust the overall appearance of the theme.', 'proton' ),
-	            'section'    => 'proton_color_scheme',
+	            'section'    => 'title_tagline',
 	            'settings'   => 'proton_color_scheme_toggle',
 	            'type'    => 'radio',
 	            'choices' => array(

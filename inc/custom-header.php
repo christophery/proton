@@ -26,6 +26,7 @@ function proton_custom_header_setup() {
 				'flex-width'         => true,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'proton_header_style',
+				'header-text' => false
 			)
 		)
 	);

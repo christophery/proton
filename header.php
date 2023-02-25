@@ -15,9 +15,7 @@ $proton_image = wp_get_attachment_image( $proton_custom_logo_id , 'full', false,
 $proton_blog_name = get_bloginfo( 'name' );
 $proton_blog_description = get_bloginfo( 'description' );
 
-$classes = array(
-    'no-infinite-scroll',
-);
+$classes = array();
 
 //add dark mode class if enabled
 if( get_theme_mod( 'proton_color_scheme_toggle') === 'dark' ){

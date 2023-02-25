@@ -75,25 +75,25 @@ $classes = implode(' ', $classes);
             <div class="gh-head-actions">
                 <div class="gh-social">
                     <?php if ( get_theme_mod( 'proton_social_facebook') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_facebook') ); ?>" title="<?php esc_html_e( 'Facebook', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/facebook'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_facebook') ); ?>" title="<?php esc_attr_e( 'Facebook', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/facebook'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_twitter') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_twitter') ); ?>" title="<?php esc_html_e( 'Twitter', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/twitter'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_twitter') ); ?>" title="<?php esc_attr_e( 'Twitter', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/twitter'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_instagram') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_instagram') ); ?>" title="<?php esc_html_e( 'Instagram', 'proton' ); ?>" target="_blank" rel="menoopener"><?php get_template_part('template-parts/icons/instagram'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_instagram') ); ?>" title="<?php esc_attr_e( 'Instagram', 'proton' ); ?>" target="_blank" rel="menoopener"><?php get_template_part('template-parts/icons/instagram'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_youtube') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_youtube') ); ?>" title="<?php esc_html_e( 'YouTube', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/youtube'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_youtube') ); ?>" title="<?php esc_attr_e( 'YouTube', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/youtube'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_github') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_github') ); ?>" title="<?php esc_html_e( 'GitHub', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/github'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_github') ); ?>" title="<?php esc_attr_e( 'GitHub', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/github'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_mastodon') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_mastodon') ); ?>" title="<?php esc_html_e( 'Mastodon', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/mastodon'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_mastodon') ); ?>" title="<?php esc_attr_e( 'Mastodon', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/mastodon'); ?></a>
                     <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_linkedin') ){ ?>
-                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_linkedin') ); ?>" title="<?php esc_html_e( 'LinkedIn', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/linkedin'); ?></a>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_linkedin') ); ?>" title="<?php esc_attr_e( 'LinkedIn', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/linkedin'); ?></a>
                     <?php } ?>
                 </div>
                 <button class="search-button gh-icon-btn"><?php get_template_part('template-parts/icons/search'); ?></button>

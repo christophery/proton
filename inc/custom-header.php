@@ -25,7 +25,7 @@ function proton_custom_header_setup() {
 				'default-text-color' => 'FFF',
 				'flex-width'         => true,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'proton_header_style',
+				//'wp-head-callback'   => 'proton_header_style',
 				'header-text' => false
 			)
 		)
@@ -57,19 +57,19 @@ if ( ! function_exists( 'proton_header_style' ) ) :
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 			?>
-			.site-title,
+			/*.site-title,
 			.site-description {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
-				}
+				}*/
 			<?php
 			// If the user has set a custom color for the text use that.
 		else :
 			?>
-			.site-title a,
+			/*.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
-			}
+			}*/
 		<?php endif; ?>
 		</style>
 		<?php

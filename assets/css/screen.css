@@ -3061,6 +3061,12 @@ html.dark-mode .post-card-image-link.no-image{
     margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+    #infinite-handle{
+        grid-column: 1/span 2;
+    }
+}
+
 /*
 
 Hey! You reached the end.

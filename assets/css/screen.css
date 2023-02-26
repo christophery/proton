@@ -1363,14 +1363,10 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* ---------------------------------------------------------- */
 
 .nav-links {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin-top: 8vmin;
-}
-
-html.no-infinite-scroll .nav-links {
-    display: grid;
 }
 
 .nav-links a {

@@ -88,6 +88,9 @@ function proton_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	/* Add full width support */
+	add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'proton_setup' );
 

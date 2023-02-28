@@ -3,8 +3,6 @@ jQuery(function($) {
     $('.gh-burger').click(function () {
         $('body').toggleClass('gh-head-open');
     });
-    // FitVids - Makes video embeds responsive
-    $(".gh-content").fitVids();
 
     /* search overlay */
     $( ".search-button" ).on( "click", function() {

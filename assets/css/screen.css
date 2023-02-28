@@ -3068,17 +3068,13 @@ html.dark-mode .post-card-image-link.no-image{
     }
 }
 
-/*
+/* Responsive Embeds
+/* ---------------------------------------------------------- */
 
-Hey! You reached the end.
-
-Hope you enjoyed this CSS file, if you have any suggestions
-for improvements that might be useful for everyone who uses
-this theme, you can find the open source repository for it
-here: https://github.com/tryghost/casper
-
-Or, if you've just scrolled all the way to the bottom of the
-file to add some of your own styles. Well, you've come to
-the right place. Onward!
-
- */
+iframe[src*="docs.google.com"],
+iframe[src*="youtube.com"],
+iframe[src*="player.vimeo.com"]{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}

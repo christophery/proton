@@ -1,6 +1,6 @@
 # Proton
 
-Proton is a personal blogging theme for WordPress. This theme is based off of Casper 5.x the default theme for the Ghost blogging platform.
+Proton is a personal blogging theme for WordPress. This theme is a port of [Casper](https://github.com/TryGhost/Casper) 5.0 for WordPress.
 
 Feel free to [contact me](https://chrisyee.ca/contact/) if you use Proton in one of your websites.
 

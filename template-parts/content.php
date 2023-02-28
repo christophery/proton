@@ -43,7 +43,7 @@ if( is_front_page() ){
     </a>
     <?php }else{ ?>
     <a class="post-card-image-link no-image" href="<?php esc_url( the_permalink() ); ?>">
-        <?php get_template_part('template-parts/icons/page-doc-smile'); ?>
+        <?php get_template_part('template-parts/icons/no-image'); ?>
     </a>
     <?php } ?>
 

@@ -63,7 +63,7 @@ function js(done) {
         src([
             // pull in lib files first so our own code can depend on it
             'assets/js/lib/*.js',
-            'assets/js/*.js'
+            'assets/js/*.js',
         ], {sourcemaps: true}),
         concat('proton.js'),
         uglify(),

@@ -4,6 +4,8 @@ jQuery(function($) {
         $('body').toggleClass('gh-head-open');
     });
 
+    console.log('works!');
+
     /* search overlay */
     $( ".search-button" ).on( "click", function() {
         //toggle search overlay

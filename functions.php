@@ -113,7 +113,7 @@ function proton_scripts() {
 
 	wp_enqueue_script( 'proton-built', get_template_directory_uri() . '/assets/built/proton.js', array('jquery'), _S_VERSION, true );
 
-	wp_enqueue_script( 'proton-main', get_template_directory_uri() . '/js/main.js', array('jquery'), _S_VERSION, true );
+	//wp_enqueue_script( 'proton-main', get_template_directory_uri() . '/js/main.js', array('jquery'), _S_VERSION, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

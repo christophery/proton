@@ -55,6 +55,7 @@ while ( have_posts() ) :
                 <li class="author-list-item">
                     <a href="<?php echo esc_url( $proton_author_url ); ?>" class="author-avatar">
                     	<?php echo $proton_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                        <span class="screen-reader-text">View all posts by <?php echo esc_html( $proton_author_display_name ); ?></span>
                     </a>                    
                 </li>
             </ul>

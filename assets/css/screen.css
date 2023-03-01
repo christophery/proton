@@ -47,7 +47,7 @@ production stylesheet in assets/built/screen.css
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand
 
-    --ghost-accent-color: {value};
+    --proton-accent-color: {value};
 
     You can use this variable throughout your styles
      */
@@ -132,7 +132,7 @@ production stylesheet in assets/built/screen.css
 .site-header {
     position: relative;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: var(--proton-accent-color);
 }
 
 .site-header-cover {
@@ -159,7 +159,7 @@ production stylesheet in assets/built/screen.css
 
 .has-cover .site-header-content {
     min-height: 560px;
-    background-color: var(--ghost-accent-color);
+    background-color: var(--proton-accent-color);
     color: #fff;
 }
 
@@ -312,7 +312,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .has-cover:not(.home) .gh-head {
-    background-color: var(--ghost-accent-color);
+    background-color: var(--proton-accent-color);
     color: #fff;
 }
 
@@ -631,7 +631,7 @@ production stylesheet in assets/built/screen.css
     font-size: 1.6rem;
     border-radius: 48px;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: var(--proton-accent-color);
 }
 
 .has-cover .gh-head-button {
@@ -952,7 +952,7 @@ production stylesheet in assets/built/screen.css
 
     .gh-head-open.has-cover #gh-head,
     .gh-head-open.has-cover #gh-head .gh-head-actions {
-        background-color: var(--ghost-accent-color);
+        background-color: var(--proton-accent-color);
     }
 
     .gh-head-open #gh-head .gh-head-menu,
@@ -1058,11 +1058,11 @@ production stylesheet in assets/built/screen.css
 
 .post-card-image-link.no-image svg polyline,
 .post-card-image-link.no-image svg path{
-    stroke: var(--ghost-accent-color);
+    stroke: var(--proton-accent-color);
 }
 
 .post-card-image-link.no-image svg path{
-    fill: var(--ghost-accent-color);
+    fill: var(--proton-accent-color);
 }
 
 .post-card-image-link::after {
@@ -1148,7 +1148,7 @@ production stylesheet in assets/built/screen.css
     align-items: center;
     gap: 3px;
     padding-left: 18px;
-    color: var(--ghost-accent-color);
+    color: var(--proton-accent-color);
 }
 
 .post-card-featured svg {
@@ -1564,7 +1564,7 @@ is the very first element in the post content */
 
 /* Now the content typography styles */
 .gh-content a {
-    color: var(--ghost-accent-color);
+    color: var(--proton-accent-color);
     text-decoration: underline;
     word-break: break-word;
 }
@@ -1643,7 +1643,7 @@ is the very first element in the post content */
     top: 0;
     bottom: 0;
     width: 0.3rem;
-    background: var(--ghost-accent-color);
+    background: var(--proton-accent-color);
 }
 
 .gh-content :not(pre) > code {
@@ -1740,7 +1740,7 @@ is the very first element in the post content */
     text-decoration: none;
     border-radius: 5px;
     transition: opacity 0.2s ease-in-out;
-    background-color: var(--ghost-accent-color);
+    background-color: var(--proton-accent-color);
     color: #fff;
 }
 
@@ -2040,7 +2040,7 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: -0.005em;
-    background: var(--ghost-accent-color);
+    background: var(--proton-accent-color);
     border-radius: 6px;
 }
 
@@ -2152,7 +2152,7 @@ iframe.instagram-media + script + :not([id]) {
 #comments input[type='email']:focus,
 #comments input[type='url']:focus{
     outline: 0;
-    border-color: var(--ghost-accent-color);
+    border-color: var(--proton-accent-color);
 }
 
 .form-submit{
@@ -2175,7 +2175,7 @@ iframe.instagram-media + script + :not([id]) {
     text-decoration: none;
     border-radius: 5px;
     transition: opacity .2s ease-in-out;
-    background-color: var(--ghost-accent-color);
+    background-color: var(--proton-accent-color);
     color: #fff;
     border: 0;
 }
@@ -2299,8 +2299,8 @@ iframe.instagram-media + script + :not([id]) {
 
 .comment-reply-link:hover,
 .comment-edit-link:hover{
-    border-color: var(--ghost-accent-color);
-    color: var(--ghost-accent-color);
+    border-color: var(--proton-accent-color);
+    color: var(--proton-accent-color);
     text-decoration: none;
 }
 
@@ -2329,13 +2329,13 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .bypostauthor > article .comment-author .avatar{
-    border: 3px solid var(--ghost-accent-color);
+    border: 3px solid var(--proton-accent-color);
     padding: 2px;
 }
 
 .bypostauthor > article .comment-author .url,
 .bypostauthor > article .comment-author .fn{
-    color: var(--ghost-accent-color);
+    color: var(--proton-accent-color);
 }
 
 .comment-body .reply{

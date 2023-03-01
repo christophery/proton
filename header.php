@@ -56,8 +56,13 @@ $classes = implode(' ', $classes);
                         <?php echo esc_html( $proton_blog_name ); ?>
                     <?php } ?>
                 </a>
-                <button class="search-button gh-icon-btn" data-ghost-search><?php get_template_part('template-parts/icons/search'); ?></button>
-                <button class="gh-burger"></button>
+                <button class="search-button gh-icon-btn" data-ghost-search>
+                    <?php get_template_part('template-parts/icons/search'); ?>
+                    <span class="screen-reader-text">Search</span>
+                </button>
+                <button class="gh-burger">
+                    <span class="screen-reader-text">Mobile Menu Toggle</span>
+                </button>
             </div>
 
             <nav class="gh-head-menu">

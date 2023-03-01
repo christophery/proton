@@ -112,7 +112,7 @@ function proton_customize_register( $wp_customize ) {
 	 */
 
 	$wp_customize->add_setting( 'proton_accent_color' , array(
-	    'default'     => '#FF1A75',
+	    'default'     => '#E90064',
 	    'transport'   => 'refresh',
 	    'sanitize_callback' => 'sanitize_hex_color'
 	) );

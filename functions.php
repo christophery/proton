@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '0.9.3' );
+	define( '_S_VERSION', '0.9.4' );
 }
 
 /**
@@ -188,7 +188,7 @@ function proton_customizer_styles() {
 	echo '<style type="text/css">';
 		if( $proton_accent_color ){
 			echo ':root {';
-				echo '--ghost-accent-color:' . $proton_accent_color . ';';
+				echo '--proton-accent-color:' . $proton_accent_color . ';';
 			echo '}';
 		}
 	echo '</style>';

@@ -30,10 +30,12 @@ $classes = array(
     <?php if ( has_post_thumbnail() ) { ?>
     <a class="post-card-image-link" href="<?php esc_url( the_permalink() ); ?>">
         <?php the_post_thumbnail('medium_large', array('class' => 'post-card-image')); ?>
+        <span class="screen-reader-text"><?php the_title(); ?> Featured Image</span>
     </a>
     <?php }else{ ?>
     <a class="post-card-image-link no-image" href="<?php esc_url( the_permalink() ); ?>">
         <?php get_template_part('template-parts/icons/no-image'); ?>
+        <span class="screen-reader-text"><?php the_title(); ?> Featured Image</span>
     </a>
     <?php } ?>
 

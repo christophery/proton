@@ -26,7 +26,7 @@
                 ?>
             </nav>
             <div>
-        		<a href="<?php echo esc_url( __( 'https://chrisyee.ca/', 'proton' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Proton by Chris Yee', 'proton' ); ?></a>
+        		<a href="<?php echo esc_url( __( 'https://chrisyee.ca/proton', 'proton' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Proton by Chris Yee', 'proton' ); ?></a>
             </div>
         </div>
     </footer>

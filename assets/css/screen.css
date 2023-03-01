@@ -3104,16 +3104,16 @@ html.dark-mode .post-card-image-link.no-image{
 }
 
 #infinite-handle span{
-    padding: 5px 16px;
-    color: var(--color-darkgrey);
+    padding: 5px 16px !important;
+    color: var(--color-darkgrey) !important;
     transition: all .2s ease;
-    background: transparent;
+    background: transparent !important;
     font-weight: 600;
 }
 
 #infinite-handle span:hover{
     text-decoration: none;
-    color: var(--proton-accent-color);
+    color: var(--proton-accent-color) !important;
 }
 
 #infinite-handle span button{

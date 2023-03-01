@@ -496,10 +496,11 @@ production stylesheet in assets/built/screen.css
     display: inline-block;
     line-height: 1.7;
     color: inherit;
+    transition: opacity 0.2s;
 }
 
 .gh-head-menu .nav a:hover {
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .gh-head-menu .nav-more-toggle {
@@ -572,6 +573,12 @@ production stylesheet in assets/built/screen.css
     color: #15171a;
 }
 
+.gh-head-menu .gh-dropdown li a:hover {
+    background: var(--proton-accent-color);
+    color: #FFF;
+    opacity: 1;
+}
+
 .is-dropdown-mega .gh-dropdown li a {
     padding: 8px 0;
 }
@@ -598,6 +605,11 @@ production stylesheet in assets/built/screen.css
 .gh-social-link svg {
     width: 18px;
     height: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.gh-social-link:hover svg{
+    transform: translateY(-50%);
 }
 
 .gh-head-actions {
@@ -1043,6 +1055,8 @@ production stylesheet in assets/built/screen.css
     margin-bottom: 32px;
 }
 
+/* No featured image fallback */
+
 .post-card-image-link.no-image{
     border: 2px solid var(--color-lightgrey);
 }
@@ -1054,6 +1068,7 @@ production stylesheet in assets/built/screen.css
     top: 0;
     left: 0;
     padding: 4em;
+    transition: all 0.3s ease-in-out;
 }
 
 .post-card-image-link.no-image svg polyline,
@@ -1063,6 +1078,21 @@ production stylesheet in assets/built/screen.css
 
 .post-card-image-link.no-image svg path{
     fill: var(--proton-accent-color);
+}
+
+/* No featured image fallback - hover animation */
+
+.post-card-image-link.no-image:hover svg{
+    transform: translateY(-10%);
+}
+
+.post-card-image-link.no-image:hover svg polyline,
+.post-card-image-link.no-image:hover svg path{
+    stroke: var(--color-darkgrey);
+}
+
+.post-card-image-link.no-image:hover svg path{
+    fill: var(--color-darkgrey);
 }
 
 .post-card-image-link::after {
@@ -1122,6 +1152,10 @@ production stylesheet in assets/built/screen.css
     text-decoration: none;
 }
 
+.post-card-content-link:hover .post-card-title{
+    color: var(--proton-accent-color);
+}
+
 .post-feed .no-image .post-card-content-link {
     padding: 0;
 }
@@ -1140,6 +1174,14 @@ production stylesheet in assets/built/screen.css
     font-weight: 600;
     letter-spacing: -0.005em;
     line-height: 1;
+}
+
+.post-card-tags a{
+    transition: all 0.2s;
+}
+
+.post-card-tags a:hover{
+    color: var(--proton-accent-color);
 }
 
 .post-card-featured {
@@ -1374,6 +1416,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-weight: 600;
 }
 
+.nav-links a:hover{
+    color: var(--proton-accent-color);
+}
+
 /*.navigation .page-number {
     grid-column-start: 2;
     color: var(--color-secondary-text);
@@ -1569,6 +1615,10 @@ is the very first element in the post content */
     word-break: break-word;
 }
 
+.gh-content a:hover{
+    color: var(--color-darkgrey);
+}
+
 .gh-content blockquote:not([class]),
 .gh-content ol,
 .gh-content ul,
@@ -1739,13 +1789,14 @@ is the very first element in the post content */
     font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background-color: var(--proton-accent-color);
     color: #fff;
 }
 
 .wp-block-button a.wp-block-button__link:hover {
     opacity: 0.85;
+    background: var(--color-darkgrey);
 }
 
 /* Cards
@@ -1965,6 +2016,14 @@ iframe.instagram-media + script + :not([id]) {
     letter-spacing: 0;
 }
 
+.article-byline-meta .author-name a{
+    transition: all 0.2s;
+}
+
+.article-byline-meta .author-name a:hover{
+    color: var(--proton-accent-color);
+}
+
 .article-byline-meta .bull {
     display: inline-block;
     margin: 0 2px;
@@ -2174,10 +2233,14 @@ iframe.instagram-media + script + :not([id]) {
     font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
-    transition: opacity .2s ease-in-out;
+    transition: all .2s ease-in-out;
     background-color: var(--proton-accent-color);
     color: #fff;
     border: 0;
+}
+
+#submit:hover{
+    background: var(--color-darkgrey);
 }
 
 .no-comments{
@@ -2461,6 +2524,11 @@ iframe.instagram-media + script + :not([id]) {
 .error-link {
     display: inline-block;
     margin-top: 5px;
+    color: var(--proton-accent-color);
+}
+
+.error-link:hover{
+    color: var(--color-darkgrey);
 }
 
 @media (min-width: 940px) {
@@ -3036,15 +3104,16 @@ html.dark-mode .post-card-image-link.no-image{
 }
 
 #infinite-handle span{
-    padding: 5px 16px !important;
-    color: var(--color-darkgrey) !important;
+    padding: 5px 16px;
+    color: var(--color-darkgrey);
     transition: all .2s ease;
-    background: transparent !important;
+    background: transparent;
     font-weight: 600;
 }
 
 #infinite-handle span:hover{
     text-decoration: none;
+    color: var(--proton-accent-color);
 }
 
 #infinite-handle span button{

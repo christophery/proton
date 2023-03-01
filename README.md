@@ -2,7 +2,9 @@
 
 Proton is a simple personal blogging theme for WordPress. 
 
-This theme is inspired by [Casper](https://github.com/TryGhost/Casper) 5.0, the default theme from the [Ghost](https://ghost.org/) blogging platform. The goal of this theme was to port Casper 5.0 to WordPress while adding personal & opinionated changes.
+This theme is inspired by [Casper](https://github.com/TryGhost/Casper) 5.0, the default theme from the [Ghost](https://ghost.org/) blogging platform. 
+
+The goal of this theme was to port Casper 5.0 to WordPress while adding personal customizations.
 
 Feel free to [contact me](https://chrisyee.ca/contact/) if you use Proton in one of your websites.
 

@@ -44,6 +44,9 @@ $classes = implode(' ', $classes);
 
 </head>
 <body <?php body_class( 'is-head-left-logo has-cover' ); ?>>
+
+    <?php wp_body_open(); ?>
+    
 <div class="viewport">
 
     <header id="gh-head" class="gh-head outer">

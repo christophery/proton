@@ -136,7 +136,20 @@ function proton_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'proton_color_scheme_toggle' , array(
 	    'default'     => 'light',
 	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'proton_sanitize_radio'
 	) );
+
+	//radio box sanitization function
+	function proton_sanitize_radio( $input, $setting ){
+	    //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	    $input = sanitize_key($input);
+
+	    //get the list of possible radio box options 
+	    $choices = $setting->manager->get_control( $setting->id )->choices;
+	                      
+	    //return input if valid or return default option
+	    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+	}
 
 	$wp_customize->add_control(
 	    new WP_Customize_Control(

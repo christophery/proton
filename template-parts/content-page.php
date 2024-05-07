@@ -36,4 +36,10 @@
 		?>
     </section>
 
+    <?php if ( comments_open() || get_comments_number() ) : ?>
+        <section class="article-comments gh-canvas">
+            <?php echo comments_template(); ?>
+        </section>
+    <?php endif; ?>
+
 </article>

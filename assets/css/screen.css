@@ -2577,6 +2577,10 @@ iframe.instagram-media + script + :not([id]) {
     background: color-mod(var(--color-darkgrey) l(-5%));
 }
 
+.page .site-footer {
+    margin-top: 0;
+}
+
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;

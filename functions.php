@@ -91,6 +91,9 @@ function proton_setup() {
 
 	/* Add full width support */
 	add_theme_support( 'align-wide' );
+
+	/* Enable appearance tools */
+	add_theme_support( 'appearance-tools' );
 }
 add_action( 'after_setup_theme', 'proton_setup' );
 

@@ -12,14 +12,6 @@ get_header();
 while ( have_posts() ) :
     the_post();
 
-    $proton_categories = get_the_category();
-
-    //get name of first category
-    $proton_category_name = $proton_categories[0]->name;
-
-    //get category url
-    $proton_category_url = get_category_link( $proton_categories[0]->term_id );
-
     $proton_author_avatar = get_avatar( get_the_author_meta( 'ID' ), 60, '', '', array( 'class' => 'author-profile-image' ) );
 
     $proton_author_bio = get_the_author_meta('description');
@@ -35,18 +27,14 @@ while ( have_posts() ) :
     <header class="article-header gh-canvas">
 
         <div class="article-tag post-card-tags">
-            <?php if( $proton_categories ){ ?>
-                <span class="post-card-primary-tag">
-                    <a href="<?php echo esc_url( $proton_category_url ); ?>"><?php echo esc_html( $proton_category_name ); ?></a>
-                </span>
-            <?php } ?>
+            <?php the_category('&bull;'); ?>
         </div>
 
         <?php the_title( '<h1 class="article-title">', '</h1>' ); ?>
 
         <?php if( has_excerpt() ){ ?>
         <p class="article-excerpt"><?php the_excerpt(); ?></p>
-    	<?php } ?>
+        <?php } ?>
 
         <div class="article-byline">
         <section class="article-byline-content">
@@ -54,7 +42,7 @@ while ( have_posts() ) :
             <ul class="author-list">
                 <li class="author-list-item">
                     <a href="<?php echo esc_url( $proton_author_url ); ?>" class="author-avatar">
-                    	<?php echo $proton_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                        <?php echo $proton_author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         <span class="screen-reader-text">View all posts by <?php echo esc_html( $proton_author_display_name ); ?></span>
                     </a>                    
                 </li>
@@ -85,7 +73,7 @@ while ( have_posts() ) :
     </header>
 
     <section class="gh-content gh-canvas">
-    	<?php the_content(); ?>
+        <?php the_content(); ?>
     </section>
 
     <?php if ( comments_open() || get_comments_number() ) : ?>

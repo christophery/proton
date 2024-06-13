@@ -1166,6 +1166,7 @@ production stylesheet in assets/built/screen.css
 
 .post-card-tags {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 12px;
     margin: 0 0 10px;

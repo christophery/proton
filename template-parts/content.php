@@ -38,12 +38,12 @@ if( is_front_page() ){
 <article <?php post_class($classes); ?>>
 
     <?php if ( has_post_thumbnail() ) { ?>
-    <a class="post-card-image-link" href="<?php esc_url( the_permalink() ); ?>">
+    <a class="post-card-image-link" href="<?php echo esc_url( get_permalink() ); ?>">
         <?php the_post_thumbnail('medium_large', array('class' => 'post-card-image')); ?>
         <span class="screen-reader-text"><?php the_title(); ?> Featured Image</span>
     </a>
     <?php }else{ ?>
-    <a class="post-card-image-link no-image" href="<?php esc_url( the_permalink() ); ?>">
+    <a class="post-card-image-link no-image" href="<?php echo esc_url( get_permalink() ); ?>">
         <?php get_template_part('template-parts/icons/no-image'); ?>
         <span class="screen-reader-text"><?php the_title(); ?> Featured Image</span>
     </a>
@@ -51,7 +51,9 @@ if( is_front_page() ){
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="<?php esc_url( the_permalink() ); ?>">
+        
+
+        <a class="post-card-content-link" href="<?php echo esc_url( get_permalink() ); ?>">
             <header class="post-card-header">
                 <div class="post-card-tags">
                     <?php if( $proton_categories ){ ?>

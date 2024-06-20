@@ -500,7 +500,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-head-menu .nav a:hover {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .gh-head-menu .nav-more-toggle {
@@ -598,10 +598,6 @@ production stylesheet in assets/built/screen.css
     color: inherit;
 }
 
-.gh-social-link:hover {
-    opacity: 0.9;
-}
-
 .gh-social-link svg {
     width: 18px;
     height: 18px;
@@ -682,10 +678,11 @@ production stylesheet in assets/built/screen.css
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    transition: opacity 0.2s;
 }
 
 .search-button:hover {
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 @media (max-width: 767px) {
@@ -2598,7 +2595,7 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.5);
     text-decoration: none;
 }
 

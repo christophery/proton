@@ -1778,7 +1778,7 @@ is the very first element in the post content */
     justify-content: flex-end;
 }
 
-.wp-block-button a.wp-block-button__link {
+.wp-block-button .wp-block-button__link {
     display: inline-flex;
     position: static;
     align-items: center;
@@ -1794,9 +1794,11 @@ is the very first element in the post content */
     color: #fff;
 }
 
-.wp-block-button a.wp-block-button__link:hover {
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus {
     opacity: 0.85;
     background: var(--color-darkgrey);
+    color: #fff;
 }
 
 /* Cards

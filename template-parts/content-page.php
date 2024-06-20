@@ -18,7 +18,10 @@
 
             <?php if ( has_post_thumbnail() ) { ?>
                 <figure class="article-image">
-                    <?php the_post_thumbnail('full', array('class' => 'post-card-image')); ?>
+                    <?php the_post_thumbnail('full'); ?>
+                    <?php if( get_the_post_thumbnail_caption() ){ ?>
+                        <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+                    <?php } ?>
                 </figure>
             <?php } ?>
 

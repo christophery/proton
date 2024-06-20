@@ -94,6 +94,10 @@ function proton_setup() {
 
 	/* Enable appearance tools */
 	add_theme_support( 'appearance-tools' );
+
+	/* Gutenberg custom stylesheet */
+	add_theme_support('editor-styles');
+	add_editor_style( 'assets/css/editor-styles.css' );
 }
 add_action( 'after_setup_theme', 'proton_setup' );
 
@@ -194,13 +198,14 @@ function proton_customizer_styles() {
 	echo '</style>';
 }
 add_action( 'wp_head', 'proton_customizer_styles' );
+add_action( 'admin_head', 'proton_customizer_styles' );
 
 /**
  * Gutenberg scripts
  */
 
 function proton_gutenberg_scripts() {
-	wp_enqueue_script( 'mwss-editor', get_stylesheet_directory_uri() . '/assets/js/editor/editor.js', array( 'wp-blocks', 'wp-dom' ), _S_VERSION, true );
+	wp_enqueue_script( 'proton-editor', get_stylesheet_directory_uri() . '/assets/js/editor/editor.js', array( 'wp-blocks', 'wp-dom' ), _S_VERSION, true );
 }
 
 add_action( 'enqueue_block_editor_assets', 'proton_gutenberg_scripts' );

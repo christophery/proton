@@ -2589,18 +2589,14 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 1.3rem;
 }
 
-.site-footer .copyright a {
-    color: #fff;
-    letter-spacing: -0.015em;
-    font-weight: 500;
-}
-
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.7);
     text-decoration: none;
 }
 

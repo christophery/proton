@@ -23,7 +23,7 @@ $classes = array(
 	'post-card',
 );
 
-if( is_front_page() ){
+if( is_home() ){
     if( $wp_query->current_post == 0 && !is_paged() ) {
         array_push($classes, 'post-card-large'); 
     }

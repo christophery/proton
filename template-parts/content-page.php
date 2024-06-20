@@ -11,17 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
 
-    <header class="article-header gh-canvas">
+    <?php if( !is_front_page() ){ ?>
+        <header class="article-header gh-canvas">
 
-        <?php the_title( '<h1 class="article-title">', '</h1>' ); ?>
+            <?php the_title( '<h1 class="article-title">', '</h1>' ); ?>
 
-        <?php if ( has_post_thumbnail() ) { ?>
-            <figure class="article-image">
-                <?php the_post_thumbnail('full', array('class' => 'post-card-image')); ?>
-            </figure>
-        <?php } ?>
+            <?php if ( has_post_thumbnail() ) { ?>
+                <figure class="article-image">
+                    <?php the_post_thumbnail('full', array('class' => 'post-card-image')); ?>
+                </figure>
+            <?php } ?>
 
-    </header>
+        </header>
+    <?php } ?>
 
     <section class="gh-content gh-canvas">
         <?php

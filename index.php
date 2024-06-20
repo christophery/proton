@@ -16,9 +16,16 @@ get_header();
 
 $proton_custom_logo_id = get_theme_mod( 'custom_logo' );
 $proton_image = wp_get_attachment_image( $proton_custom_logo_id , 'full', false, array( 'class' => 'site-logo' ) );
-
-$proton_blog_name = get_bloginfo( 'name' );
 $proton_blog_description = get_bloginfo( 'description' );
+
+if( is_front_page() ) {
+	//output title of site
+	$proton_blog_name = get_bloginfo( 'name' );
+}else{
+	//output posts page title
+	$proton_blog_name = get_the_title( get_option('page_for_posts', true) );
+}
+
 ?>
 
 	<div class="site-content">

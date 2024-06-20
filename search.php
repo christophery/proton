@@ -16,23 +16,17 @@ get_header();
     <div class="post-feed">
 
         <section class="post-card post-card-large">
-
             <div class="post-card-content">
-	            <div class="post-card-content-link">
-
-	                <header class="post-card-header">
-	                    <h2 class="post-card-title">
-		                    <?php
-	    					/* translators: %s: search query. */
-	    					printf( esc_html__( 'Search Results for: %s', 'proton' ), '<span>' . get_search_query() . '</span>' );
-	    					?>
-			        	</h2>
-	                </header>
-
-	            </div>
-            </div>
-
-        </section>
+                <header class="post-card-header">
+                    <h2 class="post-card-title">
+	                    <?php
+    					/* translators: %s: search query. */
+    					printf( esc_html__( 'Search Results for: %s', 'proton' ), '<span>' . get_search_query() . '</span>' );
+    					?>
+		        	</h2>
+                </header>
+            </div> <!-- .post-card-content -->
+        </section> <!-- .post-card -->
 
         <?php if ( have_posts() ) : ?>
 

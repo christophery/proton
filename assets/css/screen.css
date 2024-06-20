@@ -682,7 +682,6 @@ production stylesheet in assets/built/screen.css
     cursor: pointer;
     background-color: transparent;
     border: 0;
-    outline: none;
 }
 
 .search-button:hover {

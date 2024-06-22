@@ -198,7 +198,6 @@ function proton_customizer_styles() {
 	echo '</style>';
 }
 add_action( 'wp_head', 'proton_customizer_styles' );
-add_action( 'admin_head', 'proton_customizer_styles' );
 
 /**
  * Gutenberg scripts

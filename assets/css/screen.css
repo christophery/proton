@@ -311,12 +311,12 @@ production stylesheet in assets/built/screen.css
     background-color: #fff;
 }
 
-.has-cover:not(.home) .gh-head {
+.has-cover:not(.blog) .gh-head {
     background-color: var(--proton-accent-color);
     color: #fff;
 }
 
-:is(.home, .paged:not(.archive):not(.author-template)).has-cover .gh-head {
+:is(.blog, .paged:not(.archive):not(.author-template)).has-cover .gh-head {
     position: absolute;
     top: 0;
     right: 0;
@@ -346,11 +346,11 @@ production stylesheet in assets/built/screen.css
     grid-template-columns: auto 1fr auto;
 }
 
-.is-head-left-logo.home .gh-head:not(.is-header-hidden) .gh-head-logo {
+.is-head-left-logo.blog .gh-head:not(.is-header-hidden) .gh-head-logo {
     display: none;
 }
 
-.is-head-left-logo.home .gh-head:not(.is-header-hidden) .gh-head-menu {
+.is-head-left-logo.blog .gh-head:not(.is-header-hidden) .gh-head-menu {
     margin-left: -40px;
 }
 
@@ -500,7 +500,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-head-menu .nav a:hover {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .gh-head-menu .nav-more-toggle {
@@ -596,10 +596,7 @@ production stylesheet in assets/built/screen.css
 .gh-social-link {
     line-height: 0;
     color: inherit;
-}
-
-.gh-social-link:hover {
-    opacity: 0.9;
+    outline: 0;
 }
 
 .gh-social-link svg {
@@ -608,7 +605,8 @@ production stylesheet in assets/built/screen.css
     transition: all 0.3s ease-in-out;
 }
 
-.gh-social-link:hover svg{
+.gh-social-link:hover svg,
+.gh-social-link:focus svg{
     transform: translateY(-50%);
 }
 
@@ -682,11 +680,13 @@ production stylesheet in assets/built/screen.css
     cursor: pointer;
     background-color: transparent;
     border: 0;
-    outline: none;
+    outline: 0;
+    transition: transform 0.2s;
 }
 
-.search-button:hover {
-    opacity: 0.9;
+.search-button:hover,
+.search-button:focus {
+    transform: scale(1.35);
 }
 
 @media (max-width: 767px) {
@@ -805,6 +805,12 @@ production stylesheet in assets/built/screen.css
     background: transparent url('../../img/search.svg') no-repeat center center;
     background-size: 20px;
     border: none;
+    transition:  transform 0.2s;
+}
+
+.search-overlay input[type=submit]:hover,
+.search-overlay input[type=submit]:focus {
+    transform: scale(1.35);
 }
 
 .search-overlay-close {
@@ -1779,7 +1785,7 @@ is the very first element in the post content */
     justify-content: flex-end;
 }
 
-.wp-block-button a.wp-block-button__link {
+.wp-block-button .wp-block-button__link {
     display: inline-flex;
     position: static;
     align-items: center;
@@ -1795,9 +1801,11 @@ is the very first element in the post content */
     color: #fff;
 }
 
-.wp-block-button a.wp-block-button__link:hover {
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus {
     opacity: 0.85;
     background: var(--color-darkgrey);
+    color: #fff;
 }
 
 /* Cards
@@ -2573,7 +2581,7 @@ iframe.instagram-media + script + :not([id]) {
     position: relative;
     margin: max(12vmin, 64px) 0 0 0;
     padding-top: 48px;
-    padding-bottom: 140px;
+    padding-bottom: 48px;
     color: #fff;
     background: color-mod(var(--color-darkgrey) l(-5%));
 }
@@ -2590,18 +2598,14 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 1.3rem;
 }
 
-.site-footer .copyright a {
-    color: #fff;
-    letter-spacing: -0.015em;
-    font-weight: 500;
-}
-
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.5);
     text-decoration: none;
 }
 
@@ -2609,7 +2613,7 @@ iframe.instagram-media + script + :not([id]) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 0 20px;
+    margin: 0;
     padding: 0;
     list-style: none;
 }

@@ -36,9 +36,7 @@ $proton_author_website = get_the_author_meta( 'user_url' );
     <div class="post-feed">
 
         <section class="post-card post-card-large">
-
             <div class="post-card-content">
-            <div class="post-card-content-link">
 
             	<?php if( is_author() ){ ?>
                     <?php if( $proton_author_avatar ){ ?>
@@ -94,10 +92,8 @@ $proton_author_website = get_the_author_meta( 'user_url' );
                     </div>
                 </footer>
 
-            </div>
-            </div>
-
-        </section>
+            </div> <!-- .post-card-content -->
+        </section> <!-- .post-card -->
 
         <?php if ( have_posts() ) : ?>
 

@@ -2581,7 +2581,7 @@ iframe.instagram-media + script + :not([id]) {
     position: relative;
     margin: max(12vmin, 64px) 0 0 0;
     padding-top: 48px;
-    padding-bottom: 140px;
+    padding-bottom: 48px;
     color: #fff;
     background: color-mod(var(--color-darkgrey) l(-5%));
 }
@@ -2613,7 +2613,7 @@ iframe.instagram-media + script + :not([id]) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 0 20px;
+    margin: 0;
     padding: 0;
     list-style: none;
 }

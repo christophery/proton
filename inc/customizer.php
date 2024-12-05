@@ -77,6 +77,11 @@ function proton_customize_register( $wp_customize ) {
 			'placeholder' => 'https://host.tld/@username'
 		),
 		array(
+			'title' => 'Bluesky',
+			'id' => 'bluesky',
+			'placeholder' => 'https://bsky.app/profile/username.bsky.social'
+		),
+		array(
 			'title' => 'LinkedIn',
 			'id' => 'linkedin',
 			'placeholder' => 'https://linkedin.com/in/username'

@@ -100,6 +100,9 @@ $classes = implode(' ', $classes);
                     <?php if ( get_theme_mod( 'proton_social_mastodon') ){ ?>
                         <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_mastodon') ); ?>" title="<?php esc_attr_e( 'Mastodon', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/mastodon'); ?></a>
                     <?php } ?>
+                    <?php if ( get_theme_mod( 'proton_social_bluesky') ){ ?>
+                        <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_bluesky') ); ?>" title="<?php esc_attr_e( 'Bluesky', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/bluesky'); ?></a>
+                    <?php } ?>
                     <?php if ( get_theme_mod( 'proton_social_linkedin') ){ ?>
                         <a class="gh-social-link" href="<?php echo esc_url( get_theme_mod( 'proton_social_linkedin') ); ?>" title="<?php esc_attr_e( 'LinkedIn', 'proton' ); ?>" target="_blank" rel="me noopener"><?php get_template_part('template-parts/icons/linkedin'); ?></a>
                     <?php } ?>
